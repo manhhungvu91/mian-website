@@ -18,7 +18,7 @@ export default function SourcingForm() {
     'All communications confidential',
   ];
 
-  const fields = [
+  const fields: { label: string; placeholder: string; multiline: boolean }[] = [
     { label: 'Your Name', placeholder: 'Full name', multiline: false },
     { label: 'Brand or Company', placeholder: 'Brand or company name', multiline: false },
     { label: 'Product Category', placeholder: 'e.g. Denim, Knitwear, Active', multiline: false },
@@ -27,16 +27,17 @@ export default function SourcingForm() {
     { label: 'Tell us about your project', placeholder: 'Brief description of your project, timeline, and any special requirements...', multiline: true },
   ];
 
-  const inputStyle: React.CSSProperties = {
+  const baseInputStyle: React.CSSProperties = {
     fontFamily: "'Plus Jakarta Sans', sans-serif",
-    fontWeight: 300,
     fontSize: '13px',
-    color: 'rgba(13,13,11,0.7)',
+    fontWeight: 300,
+    color: '#0D0D0B',
+    background: 'transparent',
     border: 'none',
     outline: 'none',
-    background: 'transparent',
     width: '100%',
     resize: 'none',
+    padding: 0,
   };
 
   return (
@@ -48,6 +49,11 @@ export default function SourcingForm() {
         padding: isMobile ? '64px 24px' : '96px 64px',
       }}
     >
+      <style>{`
+        .mian-input::placeholder { color: rgba(13,13,11,0.35); }
+        .mian-input:focus { outline: none; }
+      `}</style>
+
       <div
         style={{
           display: 'grid',
@@ -95,7 +101,6 @@ export default function SourcingForm() {
             Whether you are placing your first 300-piece order or scaling to 500,000 — fill in the form and our sourcing team responds within 24 hours.
           </p>
 
-          {/* Trust bullets */}
           <div style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {trustLines.map((line) => (
               <div key={line} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -153,13 +158,15 @@ export default function SourcingForm() {
                 {field.multiline ? (
                   <textarea
                     placeholder={field.placeholder}
-                    style={{ ...inputStyle, minHeight: '80px' }}
+                    className="mian-input"
+                    style={{ ...baseInputStyle, minHeight: '80px' }}
                   />
                 ) : (
                   <input
                     type="text"
                     placeholder={field.placeholder}
-                    style={inputStyle}
+                    className="mian-input"
+                    style={baseInputStyle}
                   />
                 )}
               </div>

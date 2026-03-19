@@ -13,7 +13,7 @@ export default function Hero() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: '0 64px 64px 64px',
+        padding: '120px 64px 64px 64px',
       }}
     >
       {/* Eyebrow + headline + sub — sits above the bottom row */}
