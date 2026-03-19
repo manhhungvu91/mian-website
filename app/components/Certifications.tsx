@@ -25,7 +25,7 @@ export default function Certifications() {
     <section
       style={{
         width: '100%',
-        background: 'var(--black)',
+        background: 'var(--ink)',
         padding: isMobile ? '140px 32px' : '140px 80px',
       }}
     >
@@ -38,7 +38,7 @@ export default function Certifications() {
               fontSize: '8px',
               letterSpacing: '0.28em',
               textTransform: 'uppercase',
-              color: 'var(--grey-3)',
+              color: 'var(--stone-3)',
               marginBottom: '16px',
             }}
           >
@@ -46,10 +46,10 @@ export default function Certifications() {
           </p>
           <h2
             style={{
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 400,
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 300,
               fontSize: isMobile ? 'clamp(28px, 6vw, 36px)' : '36px',
-              color: 'var(--white)',
+              color: 'var(--parchment)',
               lineHeight: 1.05,
             }}
           >
@@ -72,7 +72,7 @@ export default function Certifications() {
                 fontWeight: 400,
                 fontSize: '13px',
                 letterSpacing: '0.01em',
-                color: 'rgba(245,245,243,0.7)',
+                color: 'rgba(242,237,230,0.7)',
               }}
             >
               {cert}
@@ -86,7 +86,7 @@ export default function Certifications() {
             fontWeight: 300,
             fontSize: '14px',
             letterSpacing: '0.01em',
-            color: 'var(--grey-3)',
+            color: 'var(--stone-3)',
             lineHeight: 1.8,
             marginTop: '80px',
             maxWidth: '520px',

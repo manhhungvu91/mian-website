@@ -3,10 +3,10 @@ export default function Ticker() {
     <div
       style={{
         width: '100%',
-        background: 'var(--surf-1)',
+        background: 'var(--parchment-2)',
         padding: '20px 0',
-        borderTop: '0.5px solid var(--surf-2)',
-        borderBottom: '0.5px solid var(--surf-2)',
+        borderTop: '0.5px solid var(--parchment-3)',
+        borderBottom: '0.5px solid var(--parchment-3)',
         textAlign: 'center',
       }}
     >
@@ -17,7 +17,7 @@ export default function Ticker() {
           fontSize: '9px',
           letterSpacing: '0.3em',
           textTransform: 'uppercase',
-          color: 'var(--grey-3)',
+          color: 'var(--stone-3)',
         }}
       >
         ZARA · H&amp;M · COSTCO · WALMART · TARGET · EDDIE BAUER

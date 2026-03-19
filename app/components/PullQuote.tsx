@@ -16,18 +16,18 @@ export default function PullQuote() {
     <section
       style={{
         width: '100%',
-        background: 'var(--black)',
+        background: 'var(--ink)',
         padding: isMobile ? '140px 32px' : '140px 80px',
       }}
     >
       <div style={{ maxWidth: '1320px', margin: '0 auto' }}>
         <span
           style={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 400,
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 300,
             fontSize: '120px',
             lineHeight: 0,
-            color: 'var(--oak)',
+            color: 'var(--camel)',
             opacity: 0.4,
             display: 'block',
             marginBottom: '-40px',
@@ -38,12 +38,12 @@ export default function PullQuote() {
 
         <blockquote
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Cormorant Garamond', serif",
             fontSize: isMobile ? 'clamp(28px, 5vw, 40px)' : 'clamp(32px, 4.5vw, 52px)',
             fontWeight: 400,
             fontStyle: 'italic',
             lineHeight: 1.15,
-            color: 'var(--white)',
+            color: 'var(--parchment)',
             maxWidth: '820px',
             margin: 0,
           }}
@@ -59,7 +59,7 @@ export default function PullQuote() {
               fontSize: '9px',
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: 'var(--grey-3)',
+              color: 'var(--stone-3)',
             }}
           >
             MIAN Apparel · Full-Service Manufacturing
@@ -71,7 +71,7 @@ export default function PullQuote() {
               fontStyle: 'italic',
               fontSize: '11px',
               letterSpacing: '0.01em',
-              color: 'var(--grey-2)',
+              color: 'var(--stone-2)',
               marginTop: '6px',
             }}
           >

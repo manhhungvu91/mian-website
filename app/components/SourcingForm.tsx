@@ -28,7 +28,7 @@ export default function SourcingForm() {
     fontSize: '14px',
     fontWeight: 300,
     letterSpacing: '0.01em',
-    color: 'var(--black)',
+    color: 'var(--ink)',
     background: 'transparent',
     border: 'none',
     outline: 'none',
@@ -52,12 +52,12 @@ export default function SourcingForm() {
       id="inquire"
       style={{
         width: '100%',
-        background: 'var(--white)',
+        background: 'var(--parchment)',
         padding: isMobile ? '140px 32px' : '140px 80px',
       }}
     >
       <style>{`
-        .mian-input::placeholder { color: rgba(13,13,11,0.3); font-family: 'Inter', sans-serif; font-weight: 300; }
+        .mian-input::placeholder { color: rgba(26,23,20,0.3); font-family: 'Inter', sans-serif; font-weight: 300; }
         .mian-input:focus { outline: none; }
         .mian-submit { transition: opacity 200ms ease-out; }
         .mian-submit:hover { opacity: 0.6; }
@@ -81,7 +81,7 @@ export default function SourcingForm() {
                 fontSize: '8px',
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
-                color: 'var(--grey-3)',
+                color: 'var(--stone-3)',
                 marginBottom: '20px',
               }}
             >
@@ -89,10 +89,10 @@ export default function SourcingForm() {
             </p>
             <h2
               style={{
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 400,
+                fontFamily: "'Cormorant Garamond', serif",
+                fontWeight: 300,
                 fontSize: '36px',
-                color: 'var(--black)',
+                color: 'var(--ink)',
                 marginBottom: '20px',
                 lineHeight: 1.05,
               }}
@@ -105,7 +105,7 @@ export default function SourcingForm() {
                 fontWeight: 300,
                 fontSize: '14px',
                 letterSpacing: '0.01em',
-                color: 'var(--grey-2)',
+                color: 'var(--stone-2)',
                 lineHeight: 1.8,
                 maxWidth: '320px',
               }}
@@ -128,11 +128,11 @@ export default function SourcingForm() {
               >
                 <p
                   style={{
-                    fontFamily: "'Playfair Display', serif",
+                    fontFamily: "'Cormorant Garamond', serif",
                     fontStyle: 'italic',
                     fontWeight: 400,
                     fontSize: isMobile ? '22px' : '26px',
-                    color: 'var(--black)',
+                    color: 'var(--ink)',
                     lineHeight: 1.4,
                   }}
                 >
@@ -145,8 +145,8 @@ export default function SourcingForm() {
                   <div
                     key={field.id}
                     style={{
-                      background: '#FFFFFF',
-                      border: '0.5px solid rgba(13,13,11,0.10)',
+                      background: 'var(--parchment-2)',
+                      border: '0.5px solid rgba(26,23,20,0.10)',
                       padding: '14px 16px',
                     }}
                   >
@@ -158,7 +158,7 @@ export default function SourcingForm() {
                         fontSize: '8px',
                         letterSpacing: '0.28em',
                         textTransform: 'uppercase',
-                        color: 'var(--grey-3)',
+                        color: 'var(--stone-3)',
                         marginBottom: '6px',
                         display: 'block',
                       }}
@@ -190,8 +190,8 @@ export default function SourcingForm() {
                   className="mian-submit"
                   style={{
                     width: '100%',
-                    background: 'var(--oak)',
-                    color: 'var(--black)',
+                    background: 'var(--camel)',
+                    color: 'var(--ink)',
                     fontFamily: "'Inter', sans-serif",
                     fontWeight: 500,
                     fontSize: '9px',
@@ -213,7 +213,7 @@ export default function SourcingForm() {
                     fontWeight: 300,
                     fontSize: '11px',
                     letterSpacing: '0.01em',
-                    color: 'var(--grey-3)',
+                    color: 'var(--stone-3)',
                     textAlign: 'center',
                     marginTop: '16px',
                   }}

@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: 'var(--black)',
+        background: 'var(--ink)',
         padding: '64px 0',
         display: 'flex',
         flexDirection: 'column',
@@ -17,7 +17,7 @@ export default function Footer() {
           fontSize: '11px',
           letterSpacing: '0.3em',
           textTransform: 'uppercase',
-          color: 'var(--white)',
+          color: 'var(--parchment)',
         }}
       >
         MIAN
@@ -29,7 +29,7 @@ export default function Footer() {
           fontWeight: 300,
           fontSize: '10px',
           letterSpacing: '0.1em',
-          color: 'var(--grey-3)',
+          color: 'var(--stone-3)',
         }}
       >
         Vietnam&apos;s Full-Service Manufacturing Partner
@@ -41,7 +41,7 @@ export default function Footer() {
           fontWeight: 300,
           fontSize: '10px',
           letterSpacing: '0.01em',
-          color: 'var(--grey-3)',
+          color: 'var(--stone-3)',
         }}
       >
         mianapparel.com · sourcing@mianapparel.com

@@ -35,13 +35,13 @@ export default function Differentiators() {
     },
   ];
 
-  const cardBg = ['var(--white)', 'var(--surf-1)', 'var(--white)', 'var(--surf-1)'];
+  const cardBg = ['var(--parchment)', 'var(--parchment-2)', 'var(--parchment)', 'var(--parchment-2)'];
 
   return (
     <section
       style={{
         width: '100%',
-        background: 'var(--surf-2)',
+        background: 'var(--parchment-3)',
         padding: isMobile ? '140px 0' : '140px 0',
       }}
     >
@@ -63,7 +63,7 @@ export default function Differentiators() {
                 fontSize: '8px',
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
-                color: 'var(--grey-3)',
+                color: 'var(--stone-3)',
                 marginBottom: '16px',
               }}
             >
@@ -71,10 +71,10 @@ export default function Differentiators() {
             </p>
             <h2
               style={{
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 400,
+                fontFamily: "'Cormorant Garamond', serif",
+                fontWeight: 300,
                 fontSize: isMobile ? 'clamp(32px, 8vw, 42px)' : '42px',
-                color: 'var(--black)',
+                color: 'var(--ink)',
                 lineHeight: 1.05,
               }}
             >
@@ -89,7 +89,7 @@ export default function Differentiators() {
                 fontWeight: 300,
                 fontSize: '14px',
                 letterSpacing: '0.01em',
-                color: 'var(--grey-2)',
+                color: 'var(--stone-2)',
                 maxWidth: '320px',
                 textAlign: 'right',
                 lineHeight: 1.8,
@@ -118,11 +118,11 @@ export default function Differentiators() {
           >
             <h3
               style={{
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 400,
+                fontFamily: "'Cormorant Garamond', serif",
+                fontWeight: 300,
                 fontStyle: 'italic',
                 fontSize: '26px',
-                color: 'var(--black)',
+                color: 'var(--ink)',
                 marginBottom: '20px',
                 lineHeight: 1.05,
               }}
@@ -135,7 +135,7 @@ export default function Differentiators() {
                 fontWeight: 300,
                 fontSize: '14px',
                 letterSpacing: '0.01em',
-                color: 'var(--grey-1)',
+                color: 'var(--stone)',
                 lineHeight: 1.8,
                 maxWidth: '520px',
               }}

@@ -32,8 +32,8 @@ export default function Nav() {
         padding: '8px 20px',
         borderRadius: '100px',
         transition: 'background 300ms ease-out, border-color 300ms ease-out, backdrop-filter 300ms ease-out',
-        background: scrolled ? 'rgba(13,13,11,0.88)' : 'transparent',
-        border: scrolled ? '0.5px solid rgba(245,245,243,0.10)' : '0.5px solid transparent',
+        background: scrolled ? 'rgba(26,23,20,0.88)' : 'transparent',
+        border: scrolled ? '0.5px solid rgba(242,237,230,0.10)' : '0.5px solid transparent',
         backdropFilter: scrolled ? 'blur(14px)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
       }}
@@ -45,7 +45,7 @@ export default function Nav() {
           fontSize: '11px',
           letterSpacing: '0.3em',
           textTransform: 'uppercase',
-          color: '#F5F5F3',
+          color: 'var(--parchment)',
           whiteSpace: 'nowrap',
         }}
       >
@@ -57,7 +57,7 @@ export default function Nav() {
           style={{
             width: '0.5px',
             height: '10px',
-            background: 'rgba(245,245,243,0.18)',
+            background: 'rgba(242,237,230,0.18)',
             flexShrink: 0,
           }}
         />
@@ -75,7 +75,7 @@ export default function Nav() {
                 fontSize: '9px',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: 'rgba(245,245,243,0.7)',
+                color: 'rgba(242,237,230,0.7)',
                 textDecoration: 'none',
                 cursor: 'pointer',
                 transition: 'opacity 200ms ease-out',
@@ -94,7 +94,7 @@ export default function Nav() {
           style={{
             width: '0.5px',
             height: '10px',
-            background: 'rgba(245,245,243,0.18)',
+            background: 'rgba(242,237,230,0.18)',
             flexShrink: 0,
           }}
         />
@@ -108,8 +108,8 @@ export default function Nav() {
           fontSize: '9px',
           letterSpacing: '0.2em',
           textTransform: 'uppercase',
-          color: '#F5F5F3',
-          border: '0.5px solid rgba(245,245,243,0.35)',
+          color: 'var(--parchment)',
+          border: '0.5px solid rgba(242,237,230,0.35)',
           borderRadius: '100px',
           padding: '8px 20px',
           background: 'transparent',

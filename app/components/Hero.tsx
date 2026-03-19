@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       style={{
         minHeight: '100vh',
-        background: 'var(--black)',
+        background: 'var(--ink)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
@@ -34,7 +34,7 @@ export default function Hero() {
               fontSize: '8px',
               letterSpacing: '0.28em',
               textTransform: 'uppercase',
-              color: 'var(--oak)',
+              color: 'var(--camel)',
               marginBottom: '28px',
             }}
           >
@@ -43,12 +43,12 @@ export default function Hero() {
 
           <h1
             style={{
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 400,
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 300,
               fontSize: isMobile ? '72px' : 'clamp(80px, 13vw, 168px)',
               lineHeight: 0.85,
               letterSpacing: '-0.03em',
-              color: 'var(--white)',
+              color: 'var(--parchment)',
               marginBottom: '40px',
             }}
           >
@@ -64,7 +64,7 @@ export default function Hero() {
               fontSize: '14px',
               lineHeight: 1.8,
               letterSpacing: '0.01em',
-              color: 'var(--grey-3)',
+              color: 'var(--stone-3)',
               maxWidth: '520px',
             }}
           >
@@ -88,8 +88,8 @@ export default function Hero() {
               fontSize: '9px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: 'var(--black)',
-              background: 'var(--white)',
+              color: 'var(--ink)',
+              background: 'var(--parchment)',
               padding: '14px 32px',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
@@ -108,10 +108,10 @@ export default function Hero() {
               <span
                 key={number}
                 style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontWeight: 400,
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 300,
                   fontSize: '22px',
-                  color: 'var(--white)',
+                  color: 'var(--parchment)',
                   lineHeight: 1,
                   letterSpacing: '-0.01em',
                 }}

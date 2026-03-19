@@ -21,7 +21,7 @@ export default function StatsBar() {
   }, []);
 
   return (
-    <section style={{ width: '100%', background: 'var(--black)', padding: 0 }}>
+    <section style={{ width: '100%', background: 'var(--ink)', padding: 0 }}>
       <div
         style={{
           maxWidth: '1320px',
@@ -41,17 +41,17 @@ export default function StatsBar() {
               style={{
                 padding: isMobile ? '56px 16px' : '80px 20px',
                 textAlign: 'center',
-                borderRight: isLastCol ? 'none' : '0.5px solid rgba(245,245,243,0.08)',
+                borderRight: isLastCol ? 'none' : '0.5px solid rgba(242,237,230,0.08)',
               }}
             >
               <div
                 style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontWeight: 400,
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 300,
                   fontSize: isMobile ? '40px' : '52px',
                   lineHeight: 1,
                   letterSpacing: '-0.02em',
-                  color: 'var(--white)',
+                  color: 'var(--parchment)',
                 }}
               >
                 {stat.number}
@@ -63,7 +63,7 @@ export default function StatsBar() {
                   fontSize: '8px',
                   letterSpacing: '0.22em',
                   textTransform: 'uppercase',
-                  color: 'rgba(245,245,243,0.4)',
+                  color: 'rgba(242,237,230,0.4)',
                   marginTop: '10px',
                 }}
               >

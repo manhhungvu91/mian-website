@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --white: #F5F5F3;
-  --surf-1: #EDEDEA;
-  --surf-2: #E4E2DE;
-  --black: #0D0D0B;
-  --dark-1: #2E2E2C;
-  --grey-1: #4A4A47;
-  --grey-2: #6E6E6A;
-  --grey-3: #8A8A86;
-  --grey-4: #BEBEBB;
-  --oak: #C8941A;
-  --oak-hot: #D9A52A;
-  --oak-pale: #E8BE6A;
-  --oak-mist: #F5EDD4;
-  --oak-deep: #8A6210;
-  --bd: rgba(13,13,11,0.08);
-  --bd-m: rgba(13,13,11,0.14);
-  --bd-s: rgba(13,13,11,0.22);
-  --bd-dark: rgba(245,245,243,0.09);
+  --parchment: #F2EDE6;
+  --parchment-2: #EDE7DF;
+  --parchment-3: #E4DDD5;
+  --ink: #1A1714;
+  --ink-1: #2E2A27;
+  --stone: #6B6460;
+  --stone-2: #8C847A;
+  --stone-3: #A89F96;
+  --stone-4: #C8BFB8;
+  --camel: #C4A882;
+  --camel-pale: #D4BC9E;
+  --camel-mist: #EDE4D8;
+  --camel-deep: #8A7055;
+  --bd: rgba(26,23,20,0.07);
+  --bd-m: rgba(26,23,20,0.12);
+  --bd-s: rgba(26,23,20,0.20);
+  --bd-dark: rgba(242,237,230,0.08);
+  --bd-dark-m: rgba(242,237,230,0.14);
 }
 
 *, *::before, *::after {
@@ -36,8 +36,8 @@ html {
 }
 
 body {
-  background: var(--white);
-  color: var(--black);
+  background: var(--parchment);
+  color: var(--ink);
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -47,8 +47,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
   line-height: 1.05;
 }
 
