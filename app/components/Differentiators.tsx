@@ -2,38 +2,37 @@ export default function Differentiators() {
   const cards = [
     {
       number: '01',
-      title: ['MOQ ', <em key="i" style={{ fontStyle: 'italic' }}>Flexibility</em>],
+      titleFirst: 'MOQ ',
+      titleItalic: 'Flexibility',
       body: '300 pieces or 500,000 — we scale with you. No brand too small. No volume too large.',
       tag: 'Key differentiator →',
     },
     {
       number: '02',
-      title: ['CLO3D ', <em key="i" style={{ fontStyle: 'italic' }}>Co-Development</em>],
-      body: 'Reduce sample rounds. Speed to market. Digital development workflow unlike any factory in Vietnam.',
+      titleFirst: 'Sample ',
+      titleItalic: 'Development',
+      body: 'Physical and digital sampling in-house — we work in CLO3D and Style 3D. Fewer rounds, faster approvals, speed to market.',
       tag: 'Innovation proof →',
     },
     {
       number: '03',
-      title: ['Vertical ', <em key="i" style={{ fontStyle: 'italic' }}>Integration</em>],
-      body: 'Knit. Wash. Print. Dye. Deliver — all under one roof. Full supply chain, one partner.',
+      titleFirst: 'Vertical ',
+      titleItalic: 'Integration',
+      body: 'Fabric sourcing, development, bulk production, washing, dyeing, printing and delivery — all under one roof. One partner, full control.',
       tag: 'Operational proof →',
     },
     {
       number: '04',
-      title: ['Real ', <em key="i" style={{ fontStyle: 'italic' }}>Sustainability</em>],
-      body: 'Solar roofing live 2025. Electric boilers since H2-2024. Higg, Fair Trade, BetterWork verified.',
+      titleFirst: 'Sustainability ',
+      titleItalic: 'Efforts',
+      body: 'We are actively investing in a cleaner operation — solar roofing installation underway, transitioning to more sustainable boiler systems, and verified by Higg, Fair Trade, and BetterWork.',
       tag: 'Proof not promise →',
     },
   ];
 
   return (
-    <section
-      style={{
-        width: '100%',
-        background: '#EDEDEA',
-        padding: '96px 64px',
-      }}
-    >
+    <section style={{ width: '100%', background: '#EDEDEA', padding: '96px 64px' }}>
+
       {/* Section header */}
       <div
         style={{
@@ -43,7 +42,6 @@ export default function Differentiators() {
           marginBottom: '64px',
         }}
       >
-        {/* Left */}
         <div>
           <p
             style={{
@@ -71,7 +69,6 @@ export default function Differentiators() {
           </h2>
         </div>
 
-        {/* Right */}
         <p
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
@@ -83,7 +80,7 @@ export default function Differentiators() {
             lineHeight: 1.75,
           }}
         >
-          From CLO3D co-development to MOQ flexibility — we are built differently from every other factory in Vietnam.
+          From digital development to full vertical integration — we are built differently from every other factory in Vietnam.
         </p>
       </div>
 
@@ -127,7 +124,7 @@ export default function Differentiators() {
                 lineHeight: 1.05,
               }}
             >
-              {card.title}
+              {card.titleFirst}<em style={{ fontStyle: 'italic' }}>{card.titleItalic}</em>
             </h3>
             <p
               style={{
