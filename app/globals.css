@@ -1,27 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #F5F5F3;
+  --surf-1: #EDEDEA;
+  --surf-2: #E4E2DE;
+  --black: #0D0D0B;
+  --dark-1: #2E2E2C;
+  --grey-1: #4A4A47;
+  --grey-2: #6E6E6A;
+  --grey-3: #8A8A86;
+  --grey-4: #BEBEBB;
+  --oak: #C8941A;
+  --oak-hot: #D9A52A;
+  --oak-pale: #E8BE6A;
+  --oak-mist: #F5EDD4;
+  --oak-deep: #8A6210;
+  --bd: rgba(13,13,11,0.08);
+  --bd-m: rgba(13,13,11,0.14);
+  --bd-s: rgba(13,13,11,0.22);
+  --bd-dark: rgba(245,245,243,0.09);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
