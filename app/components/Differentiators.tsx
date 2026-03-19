@@ -1,4 +1,17 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function Differentiators() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   const cards = [
     {
       number: '01',
@@ -31,14 +44,15 @@ export default function Differentiators() {
   ];
 
   return (
-    <section style={{ width: '100%', background: '#EDEDEA', padding: '96px 64px' }}>
+    <section style={{ width: '100%', background: '#EDEDEA', padding: isMobile ? '64px 24px' : '96px 64px' }}>
 
       {/* Section header */}
       <div
         style={{
           display: 'flex',
+          flexDirection: isMobile ? 'column' : 'row',
           justifyContent: 'space-between',
-          alignItems: 'flex-end',
+          alignItems: isMobile ? 'flex-start' : 'flex-end',
           marginBottom: '64px',
         }}
       >
@@ -60,7 +74,7 @@ export default function Differentiators() {
             style={{
               fontFamily: "'Playfair Display', serif",
               fontWeight: 400,
-              fontSize: '34px',
+              fontSize: isMobile ? 'clamp(28px, 6vw, 34px)' : '34px',
               color: '#0D0D0B',
               lineHeight: 1.05,
             }}
@@ -69,26 +83,28 @@ export default function Differentiators() {
           </h2>
         </div>
 
-        <p
-          style={{
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
-            fontWeight: 300,
-            fontSize: '12px',
-            color: '#6E6E6A',
-            maxWidth: '280px',
-            textAlign: 'right',
-            lineHeight: 1.75,
-          }}
-        >
-          From digital development to full vertical integration — we are built differently from every other factory in Vietnam.
-        </p>
+        {!isMobile && (
+          <p
+            style={{
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontWeight: 300,
+              fontSize: '12px',
+              color: '#6E6E6A',
+              maxWidth: '280px',
+              textAlign: 'right',
+              lineHeight: 1.75,
+            }}
+          >
+            From digital development to full vertical integration — we are built differently from every other factory in Vietnam.
+          </p>
+        )}
       </div>
 
       {/* Cards grid */}
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
+          gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
           gap: '3px',
         }}
       >
@@ -98,7 +114,7 @@ export default function Differentiators() {
             style={{
               background: '#F5F5F3',
               border: '0.5px solid rgba(13,13,11,0.08)',
-              padding: '40px',
+              padding: isMobile ? '28px' : '40px',
             }}
           >
             <p
@@ -118,7 +134,7 @@ export default function Differentiators() {
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 400,
-                fontSize: '22px',
+                fontSize: isMobile ? '20px' : '22px',
                 color: '#0D0D0B',
                 marginBottom: '10px',
                 lineHeight: 1.05,
@@ -130,7 +146,7 @@ export default function Differentiators() {
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 300,
-                fontSize: '13px',
+                fontSize: isMobile ? '14px' : '13px',
                 color: '#6E6E6A',
                 lineHeight: 1.75,
               }}

@@ -1,4 +1,17 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function Certifications() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   const certs = [
     { badge: 'W', name: 'WRAP' },
     { badge: 'H', name: 'Higg Index' },
@@ -9,7 +22,8 @@ export default function Certifications() {
   ];
 
   return (
-    <section style={{ width: '100%', background: '#0D0D0B', padding: '96px 64px' }}>
+    <section style={{ width: '100%', background: '#0D0D0B', padding: isMobile ? '64px 24px' : '96px 64px' }}>
+
       {/* Header */}
       <div style={{ marginBottom: '48px' }}>
         <p
@@ -29,7 +43,7 @@ export default function Certifications() {
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 400,
-            fontSize: '28px',
+            fontSize: isMobile ? 'clamp(28px, 6vw, 34px)' : '28px',
             color: '#F5F5F3',
             lineHeight: 1.05,
           }}
@@ -39,7 +53,14 @@ export default function Certifications() {
       </div>
 
       {/* Grid */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3px', marginTop: '48px' }}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '3px',
+          marginTop: '48px',
+        }}
+      >
         {certs.map((cert) => (
           <div
             key={cert.badge}
@@ -89,7 +110,7 @@ export default function Certifications() {
         style={{
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontWeight: 300,
-          fontSize: '12px',
+          fontSize: isMobile ? '14px' : '12px',
           color: '#4A4A47',
           maxWidth: '600px',
           lineHeight: 1.75,

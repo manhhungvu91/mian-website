@@ -30,24 +30,21 @@ export default function StatsBar() {
         }}
       >
         {stats.map((stat, i) => {
-          const isLastInRow = isMobile
-            ? (i + 1) % 3 === 0 || i === stats.length - 1
-            : i === stats.length - 1;
-
+          const isLastCol = isMobile ? (i + 1) % 3 === 0 || i === stats.length - 1 : i === stats.length - 1;
           return (
             <div
               key={stat.label}
               style={{
                 padding: '28px 16px',
                 textAlign: 'center',
-                borderRight: isLastInRow ? 'none' : '0.5px solid rgba(13,13,11,0.12)',
+                borderRight: isLastCol ? 'none' : '0.5px solid rgba(13,13,11,0.12)',
               }}
             >
               <div
                 style={{
                   fontFamily: "'Playfair Display', serif",
                   fontWeight: 300,
-                  fontSize: '44px',
+                  fontSize: isMobile ? '36px' : '44px',
                   lineHeight: 1,
                   color: '#0D0D0B',
                 }}
@@ -58,7 +55,7 @@ export default function StatsBar() {
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontWeight: 300,
-                  fontSize: '8.5px',
+                  fontSize: isMobile ? '8px' : '8.5px',
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   color: 'rgba(13,13,11,0.5)',
