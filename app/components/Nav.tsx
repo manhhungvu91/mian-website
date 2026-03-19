@@ -32,7 +32,7 @@ export default function Nav() {
         padding: '10px 22px',
         borderRadius: '100px',
         transition: 'all 300ms ease',
-        background: 'red',
+        background: scrolled ? 'rgba(13,13,11,0.88)' : 'transparent',
         border: scrolled
           ? '0.5px solid rgba(245,245,243,0.10)'
           : '0.5px solid transparent',
