@@ -26,17 +26,16 @@ export default function Hero() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: isMobile ? '100px 24px 48px 24px' : '120px 64px 64px 64px',
+        padding: isMobile ? '100px 28px 48px 28px' : '120px 80px 64px 80px',
       }}
     >
-      {/* Eyebrow + headline + sub */}
       <div style={{ marginBottom: isMobile ? '36px' : '48px' }}>
         <p
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontWeight: 300,
-            fontSize: '11px',
-            letterSpacing: '0.28em',
+            fontSize: '10px',
+            letterSpacing: '0.2em',
             textTransform: 'uppercase',
             color: 'var(--oak)',
             marginBottom: '24px',
@@ -49,7 +48,7 @@ export default function Hero() {
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 400,
-            fontSize: isMobile ? '52px' : 'clamp(52px, 7vw, 96px)',
+            fontSize: isMobile ? '68px' : 'clamp(72px, 12vw, 160px)',
             lineHeight: 1.02,
             color: 'var(--white)',
             marginBottom: '28px',
@@ -65,10 +64,10 @@ export default function Hero() {
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontWeight: 300,
-            fontSize: isMobile ? '14px' : '15px',
+            fontSize: '16px',
             lineHeight: 1.7,
             color: 'var(--grey-3)',
-            maxWidth: '420px',
+            maxWidth: isMobile ? 'none' : '480px',
             textAlign: 'left',
           }}
         >
@@ -76,7 +75,6 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Bottom row — buttons left, stats right */}
       <div
         style={{
           display: 'flex',
@@ -86,7 +84,6 @@ export default function Hero() {
           gap: isMobile ? '24px' : '40px',
         }}
       >
-        {/* Buttons */}
         <div
           style={{
             display: 'flex',
@@ -100,13 +97,13 @@ export default function Hero() {
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontWeight: 500,
-              fontSize: '10px',
+              fontSize: '11.5px',
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
               color: 'var(--black)',
               background: 'var(--white)',
               borderRadius: '0',
-              padding: '13px 28px',
+              padding: '14px 32px',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
               textAlign: 'center',
@@ -120,14 +117,14 @@ export default function Hero() {
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontWeight: 400,
-              fontSize: '10px',
+              fontSize: '11.5px',
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
               color: 'var(--white)',
               background: 'transparent',
               border: '0.5px solid rgba(245,245,243,0.25)',
               borderRadius: '0',
-              padding: '13px 28px',
+              padding: '14px 32px',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
               textAlign: 'center',
@@ -138,7 +135,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats */}
         <div style={{ display: 'flex', gap: isMobile ? '24px' : '48px', alignItems: 'flex-end' }}>
           {stats.map((stat) => (
             <div key={stat.label} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
@@ -146,7 +142,7 @@ export default function Hero() {
                 style={{
                   fontFamily: "'Playfair Display', serif",
                   fontWeight: 300,
-                  fontSize: '28px',
+                  fontSize: '34px',
                   color: '#F5F5F3',
                   lineHeight: 1,
                 }}
@@ -157,7 +153,7 @@ export default function Hero() {
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   fontWeight: 300,
-                  fontSize: '8.5px',
+                  fontSize: '10px',
                   textTransform: 'uppercase',
                   letterSpacing: '0.12em',
                   color: 'rgba(245,245,243,0.35)',

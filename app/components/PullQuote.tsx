@@ -1,15 +1,28 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function PullQuote() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   return (
-    <section style={{ width: '100%', background: '#0D0D0B', padding: '96px 64px' }}>
+    <section style={{ width: '100%', background: '#0D0D0B', padding: isMobile ? '72px 28px' : '112px 80px' }}>
       <blockquote
         style={{
           fontFamily: "'Playfair Display', serif",
-          fontSize: 'clamp(22px, 3.5vw, 38px)',
+          fontSize: 'clamp(28px, 4.5vw, 52px)',
           fontWeight: 400,
           fontStyle: 'italic',
           lineHeight: 1.15,
           color: '#F5F5F3',
-          maxWidth: '720px',
+          maxWidth: '820px',
           margin: 0,
         }}
       >
@@ -26,7 +39,7 @@ export default function PullQuote() {
           letterSpacing: '0.18em',
           textTransform: 'uppercase',
           color: '#8A8A86',
-          marginTop: '24px',
+          marginTop: '28px',
         }}
       >
         MIAN Apparel · Full-Service Manufacturing

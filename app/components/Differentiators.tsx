@@ -44,9 +44,8 @@ export default function Differentiators() {
   ];
 
   return (
-    <section style={{ width: '100%', background: '#EDEDEA', padding: isMobile ? '64px 24px' : '96px 64px' }}>
+    <section style={{ width: '100%', background: '#EDEDEA', padding: isMobile ? '64px 28px' : '112px 80px' }}>
 
-      {/* Section header */}
       <div
         style={{
           display: 'flex',
@@ -61,7 +60,7 @@ export default function Differentiators() {
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontWeight: 500,
-              fontSize: '9px',
+              fontSize: '10px',
               letterSpacing: '0.26em',
               textTransform: 'uppercase',
               color: '#8A8A86',
@@ -74,7 +73,7 @@ export default function Differentiators() {
             style={{
               fontFamily: "'Playfair Display', serif",
               fontWeight: 400,
-              fontSize: isMobile ? 'clamp(28px, 6vw, 34px)' : '34px',
+              fontSize: isMobile ? 'clamp(32px, 8vw, 42px)' : '42px',
               color: '#0D0D0B',
               lineHeight: 1.05,
             }}
@@ -88,9 +87,9 @@ export default function Differentiators() {
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontWeight: 300,
-              fontSize: '12px',
+              fontSize: '14px',
               color: '#6E6E6A',
-              maxWidth: '280px',
+              maxWidth: '300px',
               textAlign: 'right',
               lineHeight: 1.75,
             }}
@@ -100,7 +99,6 @@ export default function Differentiators() {
         )}
       </div>
 
-      {/* Cards grid */}
       <div
         style={{
           display: 'grid',
@@ -114,14 +112,14 @@ export default function Differentiators() {
             style={{
               background: '#F5F5F3',
               border: '0.5px solid rgba(13,13,11,0.08)',
-              padding: isMobile ? '28px' : '40px',
+              padding: isMobile ? '32px 28px' : '48px',
             }}
           >
             <p
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 500,
-                fontSize: '9px',
+                fontSize: '10px',
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
                 color: '#8A8A86',
@@ -134,9 +132,9 @@ export default function Differentiators() {
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 400,
-                fontSize: isMobile ? '20px' : '22px',
+                fontSize: isMobile ? '22px' : '26px',
                 color: '#0D0D0B',
-                marginBottom: '10px',
+                marginBottom: '12px',
                 lineHeight: 1.05,
               }}
             >
@@ -146,7 +144,7 @@ export default function Differentiators() {
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 300,
-                fontSize: isMobile ? '14px' : '13px',
+                fontSize: '15px',
                 color: '#6E6E6A',
                 lineHeight: 1.75,
               }}
@@ -157,14 +155,14 @@ export default function Differentiators() {
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 500,
-                fontSize: '8.5px',
+                fontSize: '10px',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
                 color: '#C8941A',
                 border: '0.5px solid rgba(200,148,26,0.35)',
-                padding: '4px 10px',
+                padding: '5px 12px',
                 display: 'inline-block',
-                marginTop: '14px',
+                marginTop: '16px',
               }}
             >
               {card.tag}

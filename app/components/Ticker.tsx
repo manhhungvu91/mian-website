@@ -25,7 +25,7 @@ export default function Ticker() {
         opacity: 0.5,
         flexShrink: 0,
         alignSelf: 'center',
-        margin: '0 32px',
+        margin: '0 36px',
       }}
     />
   );
@@ -37,7 +37,7 @@ export default function Ticker() {
           key={`${prefix}-item-${i}`}
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: '15px',
+            fontSize: '18px',
             fontWeight: 300,
             color: '#4A4A47',
             whiteSpace: 'nowrap',
@@ -50,7 +50,7 @@ export default function Ticker() {
           key={`${prefix}-item-${i}`}
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
-            fontSize: '8px',
+            fontSize: '10px',
             fontWeight: 500,
             letterSpacing: '0.16em',
             textTransform: 'uppercase',
@@ -81,7 +81,6 @@ export default function Ticker() {
           100% { transform: translateX(-50%); }
         }
       `}</style>
-
       <div
         style={{
           display: 'flex',

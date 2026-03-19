@@ -29,7 +29,7 @@ export default function SourcingForm() {
 
   const baseInputStyle: React.CSSProperties = {
     fontFamily: "'Plus Jakarta Sans', sans-serif",
-    fontSize: '13px',
+    fontSize: '15px',
     fontWeight: 300,
     color: '#0D0D0B',
     background: 'transparent',
@@ -46,7 +46,7 @@ export default function SourcingForm() {
       style={{
         width: '100%',
         background: '#F5F5F3',
-        padding: isMobile ? '64px 24px' : '96px 64px',
+        padding: isMobile ? '64px 28px' : '112px 80px',
       }}
     >
       <style>{`
@@ -58,7 +58,7 @@ export default function SourcingForm() {
         style={{
           display: 'grid',
           gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
-          gap: '96px',
+          gap: isMobile ? '48px' : '96px',
           alignItems: 'start',
         }}
       >
@@ -68,7 +68,7 @@ export default function SourcingForm() {
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontWeight: 500,
-              fontSize: '9px',
+              fontSize: '10px',
               letterSpacing: '0.26em',
               textTransform: 'uppercase',
               color: '#C8941A',
@@ -81,7 +81,7 @@ export default function SourcingForm() {
             style={{
               fontFamily: "'Playfair Display', serif",
               fontWeight: 400,
-              fontSize: '34px',
+              fontSize: isMobile ? 'clamp(32px, 8vw, 42px)' : '42px',
               color: '#0D0D0B',
               marginBottom: '16px',
               lineHeight: 1.05,
@@ -93,7 +93,7 @@ export default function SourcingForm() {
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontWeight: 300,
-              fontSize: '13px',
+              fontSize: '15px',
               color: '#6E6E6A',
               lineHeight: 1.75,
             }}
@@ -117,7 +117,7 @@ export default function SourcingForm() {
                   style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontWeight: 300,
-                    fontSize: '13px',
+                    fontSize: '15px',
                     color: '#4A4A47',
                   }}
                 >
@@ -145,7 +145,7 @@ export default function SourcingForm() {
                   style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontWeight: 600,
-                    fontSize: '8px',
+                    fontSize: '9.5px',
                     letterSpacing: '0.14em',
                     textTransform: 'uppercase',
                     color: '#8A8A86',
@@ -180,10 +180,10 @@ export default function SourcingForm() {
                 color: '#F5F5F3',
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 500,
-                fontSize: '10px',
-                letterSpacing: '0.14em',
+                fontSize: '12px',
+                letterSpacing: '0.16em',
                 textTransform: 'uppercase',
-                padding: '14px',
+                padding: '16px',
                 border: 'none',
                 cursor: 'pointer',
                 borderRadius: 0,
@@ -197,7 +197,7 @@ export default function SourcingForm() {
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 300,
-                fontSize: '10px',
+                fontSize: '11px',
                 color: '#8A8A86',
                 textAlign: 'center',
                 marginTop: '10px',

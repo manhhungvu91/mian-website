@@ -22,15 +22,14 @@ export default function Certifications() {
   ];
 
   return (
-    <section style={{ width: '100%', background: '#0D0D0B', padding: isMobile ? '64px 24px' : '96px 64px' }}>
+    <section style={{ width: '100%', background: '#0D0D0B', padding: isMobile ? '64px 28px' : '112px 80px' }}>
 
-      {/* Header */}
       <div style={{ marginBottom: '48px' }}>
         <p
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontWeight: 500,
-            fontSize: '9px',
+            fontSize: '10px',
             letterSpacing: '0.26em',
             textTransform: 'uppercase',
             color: '#8A8A86',
@@ -43,7 +42,7 @@ export default function Certifications() {
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 400,
-            fontSize: isMobile ? 'clamp(28px, 6vw, 34px)' : '28px',
+            fontSize: isMobile ? 'clamp(28px, 6vw, 36px)' : '36px',
             color: '#F5F5F3',
             lineHeight: 1.05,
           }}
@@ -52,7 +51,6 @@ export default function Certifications() {
         </h2>
       </div>
 
-      {/* Grid */}
       <div
         style={{
           display: 'grid',
@@ -66,7 +64,7 @@ export default function Certifications() {
             key={cert.badge}
             style={{
               background: '#2E2E2C',
-              padding: '20px 28px',
+              padding: isMobile ? '18px 20px' : '20px 28px',
               display: 'flex',
               alignItems: 'center',
               gap: '14px',
@@ -93,10 +91,9 @@ export default function Certifications() {
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 400,
-                fontSize: '12px',
+                fontSize: '14px',
                 color: '#B8B4AA',
                 letterSpacing: '0.04em',
-                whiteSpace: 'nowrap',
               }}
             >
               {cert.name}
@@ -105,14 +102,12 @@ export default function Certifications() {
         ))}
       </div>
 
-      {/* Footnote */}
       <p
         style={{
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontWeight: 300,
-          fontSize: isMobile ? '14px' : '12px',
+          fontSize: '14px',
           color: '#4A4A47',
-          maxWidth: '600px',
           lineHeight: 1.75,
           marginTop: '48px',
         }}
