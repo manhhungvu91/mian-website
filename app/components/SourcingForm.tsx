@@ -1,6 +1,17 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 export default function SourcingForm() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   const trustLines = [
     'Response within 24 hours',
     'Direct to our sourcing team — no agents',
@@ -16,23 +27,6 @@ export default function SourcingForm() {
     { label: 'Tell us about your project', placeholder: 'Brief description of your project, timeline, and any special requirements...', multiline: true },
   ];
 
-  const fieldStyle: React.CSSProperties = {
-    background: '#FFFFFF',
-    border: '0.5px solid rgba(13,13,11,0.10)',
-    padding: '14px 16px',
-  };
-
-  const labelStyle: React.CSSProperties = {
-    fontFamily: "'Plus Jakarta Sans', sans-serif",
-    fontWeight: 600,
-    fontSize: '8px',
-    letterSpacing: '0.14em',
-    textTransform: 'uppercase',
-    color: '#8A8A86',
-    marginBottom: '4px',
-    display: 'block',
-  };
-
   const inputStyle: React.CSSProperties = {
     fontFamily: "'Plus Jakarta Sans', sans-serif",
     fontWeight: 300,
@@ -46,11 +40,24 @@ export default function SourcingForm() {
   };
 
   return (
-    <section id="inquire" style={{ width: '100%', background: '#F5F5F3', padding: '96px 64px' }}>
-      <div style={{ display: 'flex', gap: '10%', alignItems: 'flex-start' }}>
-
+    <section
+      id="inquire"
+      style={{
+        width: '100%',
+        background: '#F5F5F3',
+        padding: isMobile ? '64px 24px' : '96px 64px',
+      }}
+    >
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+          gap: '96px',
+          alignItems: 'start',
+        }}
+      >
         {/* Left column */}
-        <div style={{ width: '45%', flexShrink: 0 }}>
+        <div>
           <p
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
@@ -83,20 +90,19 @@ export default function SourcingForm() {
               fontSize: '13px',
               color: '#6E6E6A',
               lineHeight: 1.75,
-              maxWidth: '360px',
             }}
           >
             Whether you are placing your first 300-piece order or scaling to 500,000 — fill in the form and our sourcing team responds within 24 hours.
           </p>
 
-          {/* Trust lines */}
-          <div style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {/* Trust bullets */}
+          <div style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {trustLines.map((line) => (
               <div key={line} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <div
                   style={{
-                    width: '4px',
-                    height: '4px',
+                    width: '5px',
+                    height: '5px',
                     borderRadius: '50%',
                     background: '#C8941A',
                     flexShrink: 0,
@@ -106,8 +112,8 @@ export default function SourcingForm() {
                   style={{
                     fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontWeight: 300,
-                    fontSize: '12px',
-                    color: '#6E6E6A',
+                    fontSize: '13px',
+                    color: '#4A4A47',
                   }}
                 >
                   {line}
@@ -118,15 +124,35 @@ export default function SourcingForm() {
         </div>
 
         {/* Right column — form */}
-        <div style={{ width: '50%', flexShrink: 0 }}>
+        <div>
           <form style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
             {fields.map((field) => (
-              <div key={field.label} style={fieldStyle}>
-                <label style={labelStyle}>{field.label}</label>
+              <div
+                key={field.label}
+                style={{
+                  background: '#FFFFFF',
+                  border: '0.5px solid rgba(13,13,11,0.10)',
+                  padding: '14px 16px',
+                  borderRadius: 0,
+                }}
+              >
+                <label
+                  style={{
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                    fontWeight: 600,
+                    fontSize: '8px',
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    color: '#8A8A86',
+                    marginBottom: '4px',
+                    display: 'block',
+                  }}
+                >
+                  {field.label}
+                </label>
                 {field.multiline ? (
                   <textarea
                     placeholder={field.placeholder}
-                    rows={4}
                     style={{ ...inputStyle, minHeight: '80px' }}
                   />
                 ) : (
@@ -174,7 +200,6 @@ export default function SourcingForm() {
             </p>
           </form>
         </div>
-
       </div>
     </section>
   );
