@@ -13,37 +13,72 @@ export default function PullQuote() {
   }, []);
 
   return (
-    <section style={{ width: '100%', background: '#0D0D0B', padding: isMobile ? '72px 28px' : '112px 80px' }}>
-      <blockquote
-        style={{
-          fontFamily: "'Playfair Display', serif",
-          fontSize: 'clamp(28px, 4.5vw, 52px)',
-          fontWeight: 400,
-          fontStyle: 'italic',
-          lineHeight: 1.15,
-          color: '#F5F5F3',
-          maxWidth: '820px',
-          margin: 0,
-        }}
-      >
-        &ldquo;Most manufacturers execute your specs. We help you{' '}
-        <span style={{ color: '#E8BE6A' }}>build them</span> — at any scale,
-        from any starting point.&rdquo;
-      </blockquote>
+    <section
+      style={{
+        width: '100%',
+        background: 'var(--black)',
+        padding: isMobile ? '140px 32px' : '140px 80px',
+      }}
+    >
+      <div style={{ maxWidth: '1320px', margin: '0 auto' }}>
+        <span
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 400,
+            fontSize: '120px',
+            lineHeight: 0,
+            color: 'var(--oak)',
+            opacity: 0.4,
+            display: 'block',
+            marginBottom: '-40px',
+          }}
+        >
+          &ldquo;
+        </span>
 
-      <p
-        style={{
-          fontFamily: "'Plus Jakarta Sans', sans-serif",
-          fontWeight: 300,
-          fontSize: '9px',
-          letterSpacing: '0.18em',
-          textTransform: 'uppercase',
-          color: '#8A8A86',
-          marginTop: '28px',
-        }}
-      >
-        MIAN Apparel · Full-Service Manufacturing
-      </p>
+        <blockquote
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: isMobile ? 'clamp(28px, 5vw, 40px)' : 'clamp(32px, 4.5vw, 52px)',
+            fontWeight: 400,
+            fontStyle: 'italic',
+            lineHeight: 1.15,
+            color: 'var(--white)',
+            maxWidth: '820px',
+            margin: 0,
+          }}
+        >
+          Most manufacturers execute your specs. We help you build them — at any scale, from any starting point.
+        </blockquote>
+
+        <div style={{ marginTop: '36px' }}>
+          <p
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 300,
+              fontSize: '9px',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: 'var(--grey-3)',
+            }}
+          >
+            MIAN Apparel · Full-Service Manufacturing
+          </p>
+          <p
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 300,
+              fontStyle: 'italic',
+              fontSize: '11px',
+              letterSpacing: '0.01em',
+              color: 'var(--grey-2)',
+              marginTop: '6px',
+            }}
+          >
+            — Vu Manh Hung, Deputy CEO
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

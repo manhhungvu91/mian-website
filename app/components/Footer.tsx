@@ -2,21 +2,22 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: '#0D0D0B',
-        padding: '48px 64px',
+        background: 'var(--black)',
+        padding: '64px 0',
         display: 'flex',
-        justifyContent: 'space-between',
+        flexDirection: 'column',
         alignItems: 'center',
+        gap: '10px',
       }}
     >
       <span
         style={{
-          fontFamily: "'Plus Jakarta Sans', sans-serif",
-          fontWeight: 600,
-          fontSize: '13px',
-          letterSpacing: '0.22em',
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: 500,
+          fontSize: '11px',
+          letterSpacing: '0.3em',
           textTransform: 'uppercase',
-          color: '#F5F5F3',
+          color: 'var(--white)',
         }}
       >
         MIAN
@@ -24,10 +25,11 @@ export default function Footer() {
 
       <span
         style={{
-          fontFamily: "'Plus Jakarta Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           fontWeight: 300,
-          fontSize: '11px',
-          color: '#4A4A47',
+          fontSize: '10px',
+          letterSpacing: '0.1em',
+          color: 'var(--grey-3)',
         }}
       >
         Vietnam&apos;s Full-Service Manufacturing Partner
@@ -35,13 +37,14 @@ export default function Footer() {
 
       <span
         style={{
-          fontFamily: "'Plus Jakarta Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           fontWeight: 300,
-          fontSize: '11px',
-          color: '#4A4A47',
+          fontSize: '10px',
+          letterSpacing: '0.01em',
+          color: 'var(--grey-3)',
         }}
       >
-        mianapparel.com
+        mianapparel.com · sourcing@mianapparel.com
       </span>
     </footer>
   );

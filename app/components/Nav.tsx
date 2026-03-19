@@ -29,24 +29,21 @@ export default function Nav() {
         display: 'flex',
         alignItems: 'center',
         gap: '20px',
-        padding: '10px 22px',
+        padding: '8px 20px',
         borderRadius: '100px',
-        transition: 'all 300ms ease',
+        transition: 'background 300ms ease-out, border-color 300ms ease-out, backdrop-filter 300ms ease-out',
         background: scrolled ? 'rgba(13,13,11,0.88)' : 'transparent',
-        border: scrolled
-          ? '0.5px solid rgba(245,245,243,0.10)'
-          : '0.5px solid transparent',
+        border: scrolled ? '0.5px solid rgba(245,245,243,0.10)' : '0.5px solid transparent',
         backdropFilter: scrolled ? 'blur(14px)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
       }}
     >
-      {/* Wordmark */}
       <span
         style={{
-          fontFamily: "'Plus Jakarta Sans', sans-serif",
-          fontWeight: 600,
-          fontSize: '13px',
-          letterSpacing: '0.22em',
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: 400,
+          fontSize: '11px',
+          letterSpacing: '0.3em',
           textTransform: 'uppercase',
           color: '#F5F5F3',
           whiteSpace: 'nowrap',
@@ -55,19 +52,17 @@ export default function Nav() {
         MIAN
       </span>
 
-      {/* Divider */}
       {!isMobile && (
         <div
           style={{
             width: '0.5px',
-            height: '12px',
+            height: '10px',
             background: 'rgba(245,245,243,0.18)',
             flexShrink: 0,
           }}
         />
       )}
 
-      {/* Nav links */}
       {!isMobile && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           {['Capabilities', 'Products', 'Factories', 'About'].map((link) => (
@@ -75,22 +70,18 @@ export default function Nav() {
               key={link}
               href={`#${link.toLowerCase()}`}
               style={{
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 300,
-                fontSize: '10.5px',
-                color: 'rgba(245,245,243,0.45)',
+                fontSize: '9px',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'rgba(245,245,243,0.7)',
                 textDecoration: 'none',
                 cursor: 'pointer',
-                transition: 'color 200ms ease-out',
+                transition: 'opacity 200ms ease-out',
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color =
-                  'rgba(245,245,243,0.85)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color =
-                  'rgba(245,245,243,0.45)';
-              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.6'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1'; }}
             >
               {link}
             </a>
@@ -98,43 +89,37 @@ export default function Nav() {
         </div>
       )}
 
-      {/* Divider */}
       {!isMobile && (
         <div
           style={{
             width: '0.5px',
-            height: '12px',
+            height: '10px',
             background: 'rgba(245,245,243,0.18)',
             flexShrink: 0,
           }}
         />
       )}
 
-      {/* CTA */}
       <a
         href="#inquire"
         style={{
-          fontFamily: "'Plus Jakarta Sans', sans-serif",
-          fontWeight: 500,
-          fontSize: '9.5px',
-          letterSpacing: '0.10em',
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: 400,
+          fontSize: '9px',
+          letterSpacing: '0.2em',
           textTransform: 'uppercase',
           color: '#F5F5F3',
-          border: '0.5px solid rgba(245,245,243,0.25)',
+          border: '0.5px solid rgba(245,245,243,0.35)',
           borderRadius: '100px',
           padding: '8px 20px',
           background: 'transparent',
           cursor: 'pointer',
           whiteSpace: 'nowrap',
           textDecoration: 'none',
-          transition: 'border-color 200ms ease-out',
+          transition: 'opacity 200ms ease-out',
         }}
-        onMouseEnter={(e) => {
-          (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,245,243,0.55)';
-        }}
-        onMouseLeave={(e) => {
-          (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,245,243,0.25)';
-        }}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.6'; }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1'; }}
       >
         Inquire
       </a>

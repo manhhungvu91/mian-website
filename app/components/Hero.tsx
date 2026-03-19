@@ -12,12 +12,6 @@ export default function Hero() {
     return () => window.removeEventListener('resize', check);
   }, []);
 
-  const stats = [
-    { number: '8.8M', label: 'pcs per month' },
-    { number: '25+', label: 'years' },
-    { number: '7', label: 'factories' },
-  ];
-
   return (
     <section
       style={{
@@ -26,154 +20,106 @@ export default function Hero() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: isMobile ? '100px 28px 48px 28px' : '120px 80px 64px 80px',
+        padding: isMobile
+          ? '120px 32px 140px 32px'
+          : '120px 80px 140px 80px',
       }}
     >
-      <style>{`
-        .hero-btn-primary { transition: background 200ms ease-out, color 200ms ease-out; }
-        .hero-btn-primary:hover { background: #C8941A !important; color: #0D0D0B !important; }
-        .hero-btn-ghost { transition: border-color 200ms ease-out; }
-        .hero-btn-ghost:hover { border-color: rgba(245,245,243,0.55) !important; }
-      `}</style>
+      <div style={{ maxWidth: '1320px', margin: '0 auto', width: '100%' }}>
+        <div style={{ marginBottom: isMobile ? '48px' : '64px' }}>
+          <p
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 400,
+              fontSize: '8px',
+              letterSpacing: '0.28em',
+              textTransform: 'uppercase',
+              color: 'var(--oak)',
+              marginBottom: '28px',
+            }}
+          >
+            Vietnam&apos;s Manufacturing Studio
+          </p>
 
-      <div style={{ marginBottom: isMobile ? '36px' : '48px' }}>
-        <p
-          style={{
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
-            fontWeight: 300,
-            fontSize: '10px',
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            color: 'var(--oak)',
-            marginBottom: '24px',
-          }}
-        >
-          Vietnam&apos;s Manufacturing Studio
-        </p>
+          <h1
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 400,
+              fontSize: isMobile ? '72px' : 'clamp(80px, 13vw, 168px)',
+              lineHeight: 0.85,
+              letterSpacing: '-0.03em',
+              color: 'var(--white)',
+              marginBottom: '40px',
+            }}
+          >
+            Your Full-<br />
+            <em style={{ fontStyle: 'italic' }}>Service</em><br />
+            Partner.
+          </h1>
 
-        <h1
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 400,
-            fontSize: isMobile ? '68px' : 'clamp(72px, 12vw, 160px)',
-            lineHeight: 1.02,
-            color: 'var(--white)',
-            marginBottom: '28px',
-            textAlign: 'left',
-          }}
-        >
-          Your Full-<br />
-          <em style={{ color: '#E8BE6A', fontStyle: 'italic' }}>Service</em><br />
-          Partner.
-        </h1>
+          <p
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 300,
+              fontSize: '14px',
+              lineHeight: 1.8,
+              letterSpacing: '0.01em',
+              color: 'var(--grey-3)',
+              maxWidth: '520px',
+            }}
+          >
+            From first sketch to final shipment — MOQ-flexible, CLO3D-ready, and trusted by Zara, H&amp;M, and Costco.
+          </p>
+        </div>
 
-        <p
-          style={{
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
-            fontWeight: 300,
-            fontSize: '16px',
-            lineHeight: 1.7,
-            color: 'var(--grey-3)',
-            maxWidth: isMobile ? 'none' : '480px',
-            textAlign: 'left',
-          }}
-        >
-          From first sketch to final shipment — MOQ-flexible, CLO3D-ready, and trusted by Zara, H&amp;M, and Costco.
-        </p>
-      </div>
-
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: isMobile ? 'column' : 'row',
-          justifyContent: isMobile ? 'flex-start' : 'space-between',
-          alignItems: isMobile ? 'flex-start' : 'flex-end',
-          gap: isMobile ? '24px' : '40px',
-        }}
-      >
         <div
           style={{
             display: 'flex',
-            flexDirection: isMobile ? 'column' : 'row',
-            gap: '12px',
-            width: isMobile ? '100%' : 'auto',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'flex-end',
           }}
         >
           <a
             href="#inquire"
-            className="hero-btn-primary"
             style={{
-              fontFamily: "'Plus Jakarta Sans', sans-serif",
-              fontWeight: 500,
-              fontSize: '11.5px',
-              letterSpacing: '0.12em',
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 400,
+              fontSize: '9px',
+              letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: 'var(--black)',
               background: 'var(--white)',
-              borderRadius: '0',
               padding: '14px 32px',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
-              textAlign: 'center',
-              display: 'block',
+              display: 'inline-block',
               cursor: 'pointer',
+              transition: 'opacity 200ms ease-out',
             }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.6'; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1'; }}
           >
-            Start a Sourcing Inquiry
+            Start an Inquiry
           </a>
-          <a
-            href="#capabilities"
-            className="hero-btn-ghost"
-            style={{
-              fontFamily: "'Plus Jakarta Sans', sans-serif",
-              fontWeight: 400,
-              fontSize: '11.5px',
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: 'var(--white)',
-              background: 'transparent',
-              border: '0.5px solid rgba(245,245,243,0.25)',
-              borderRadius: '0',
-              padding: '14px 32px',
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-              textAlign: 'center',
-              display: 'block',
-              cursor: 'pointer',
-            }}
-          >
-            See Capabilities →
-          </a>
-        </div>
 
-        <div style={{ display: 'flex', gap: isMobile ? '24px' : '48px', alignItems: 'flex-end' }}>
-          {stats.map((stat) => (
-            <div key={stat.label} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+          <div style={{ display: 'flex', gap: isMobile ? '28px' : '48px', alignItems: 'flex-end' }}>
+            {['8.8M', '25+', '7'].map((number) => (
               <span
+                key={number}
                 style={{
                   fontFamily: "'Playfair Display', serif",
-                  fontWeight: 300,
-                  fontSize: '34px',
-                  color: '#F5F5F3',
+                  fontWeight: 400,
+                  fontSize: '22px',
+                  color: 'var(--white)',
                   lineHeight: 1,
+                  letterSpacing: '-0.01em',
                 }}
               >
-                {stat.number}
+                {number}
               </span>
-              <span
-                style={{
-                  fontFamily: "'Plus Jakarta Sans', sans-serif",
-                  fontWeight: 300,
-                  fontSize: '10px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.12em',
-                  color: 'rgba(245,245,243,0.55)',
-                }}
-              >
-                {stat.label}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

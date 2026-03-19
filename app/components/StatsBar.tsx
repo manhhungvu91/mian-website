@@ -21,9 +21,11 @@ export default function StatsBar() {
   }, []);
 
   return (
-    <section style={{ width: '100%', background: '#C8941A', padding: 0 }}>
+    <section style={{ width: '100%', background: 'var(--black)', padding: 0 }}>
       <div
         style={{
+          maxWidth: '1320px',
+          margin: '0 auto',
           display: 'grid',
           gridTemplateColumns: isMobile ? 'repeat(3, 1fr)' : 'repeat(5, 1fr)',
           gap: 0,
@@ -37,31 +39,32 @@ export default function StatsBar() {
             <div
               key={stat.label}
               style={{
-                padding: isMobile ? '28px 16px' : '36px 20px',
+                padding: isMobile ? '56px 16px' : '80px 20px',
                 textAlign: 'center',
-                borderRight: isLastCol ? 'none' : '0.5px solid rgba(13,13,11,0.12)',
+                borderRight: isLastCol ? 'none' : '0.5px solid rgba(245,245,243,0.08)',
               }}
             >
               <div
                 style={{
                   fontFamily: "'Playfair Display', serif",
-                  fontWeight: 300,
-                  fontSize: isMobile ? '44px' : '56px',
+                  fontWeight: 400,
+                  fontSize: isMobile ? '40px' : '52px',
                   lineHeight: 1,
-                  color: '#0D0D0B',
+                  letterSpacing: '-0.02em',
+                  color: 'var(--white)',
                 }}
               >
                 {stat.number}
               </div>
               <div
                 style={{
-                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 300,
-                  fontSize: '11px',
-                  letterSpacing: '0.14em',
+                  fontSize: '8px',
+                  letterSpacing: '0.22em',
                   textTransform: 'uppercase',
-                  color: 'rgba(13,13,11,0.5)',
-                  marginTop: '6px',
+                  color: 'rgba(245,245,243,0.4)',
+                  marginTop: '10px',
                 }}
               >
                 {stat.label}
