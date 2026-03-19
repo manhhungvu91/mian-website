@@ -4,11 +4,18 @@ import { useEffect, useState } from 'react';
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+    onResize();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+    };
   }, []);
 
   return (
@@ -25,7 +32,7 @@ export default function Nav() {
         padding: '10px 22px',
         borderRadius: '100px',
         transition: 'all 300ms ease',
-        background: scrolled ? 'rgba(13,13,11,0.88)' : 'transparent',
+        background: 'red',
         border: scrolled
           ? '0.5px solid rgba(245,245,243,0.10)'
           : '0.5px solid transparent',
@@ -48,59 +55,60 @@ export default function Nav() {
         MIAN
       </span>
 
-      {/* Divider — hidden on mobile */}
-      <div
-        className="nav-divider"
-        style={{
-          width: '0.5px',
-          height: '12px',
-          background: 'rgba(245,245,243,0.18)',
-          flexShrink: 0,
-        }}
-      />
+      {/* Divider */}
+      {!isMobile && (
+        <div
+          style={{
+            width: '0.5px',
+            height: '12px',
+            background: 'rgba(245,245,243,0.18)',
+            flexShrink: 0,
+          }}
+        />
+      )}
 
-      {/* Nav links — hidden on mobile */}
-      <div
-        className="nav-links"
-        style={{ display: 'flex', alignItems: 'center', gap: '20px' }}
-      >
-        {['Capabilities', 'Products', 'Factories', 'About'].map((link) => (
-          <a
-            key={link}
-            href={`#${link.toLowerCase()}`}
-            style={{
-              fontFamily: "'Plus Jakarta Sans', sans-serif",
-              fontWeight: 300,
-              fontSize: '10.5px',
-              color: 'rgba(245,245,243,0.45)',
-              textDecoration: 'none',
-              cursor: 'pointer',
-              transition: 'color 200ms ease-out',
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.color =
-                'rgba(245,245,243,0.85)';
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.color =
-                'rgba(245,245,243,0.45)';
-            }}
-          >
-            {link}
-          </a>
-        ))}
-      </div>
+      {/* Nav links */}
+      {!isMobile && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          {['Capabilities', 'Products', 'Factories', 'About'].map((link) => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase()}`}
+              style={{
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontWeight: 300,
+                fontSize: '10.5px',
+                color: 'rgba(245,245,243,0.45)',
+                textDecoration: 'none',
+                cursor: 'pointer',
+                transition: 'color 200ms ease-out',
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.color =
+                  'rgba(245,245,243,0.85)';
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.color =
+                  'rgba(245,245,243,0.45)';
+              }}
+            >
+              {link}
+            </a>
+          ))}
+        </div>
+      )}
 
-      {/* Divider — hidden on mobile */}
-      <div
-        className="nav-divider"
-        style={{
-          width: '0.5px',
-          height: '12px',
-          background: 'rgba(245,245,243,0.18)',
-          flexShrink: 0,
-        }}
-      />
+      {/* Divider */}
+      {!isMobile && (
+        <div
+          style={{
+            width: '0.5px',
+            height: '12px',
+            background: 'rgba(245,245,243,0.18)',
+            flexShrink: 0,
+          }}
+        />
+      )}
 
       {/* CTA */}
       <a
@@ -123,13 +131,6 @@ export default function Nav() {
       >
         Inquire
       </a>
-
-      <style>{`
-        @media (max-width: 768px) {
-          .nav-links { display: none !important; }
-          .nav-divider { display: none !important; }
-        }
-      `}</style>
     </nav>
   );
 }
