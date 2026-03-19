@@ -29,6 +29,13 @@ export default function Hero() {
         padding: isMobile ? '100px 28px 48px 28px' : '120px 80px 64px 80px',
       }}
     >
+      <style>{`
+        .hero-btn-primary { transition: background 200ms ease-out, color 200ms ease-out; }
+        .hero-btn-primary:hover { background: #C8941A !important; color: #0D0D0B !important; }
+        .hero-btn-ghost { transition: border-color 200ms ease-out; }
+        .hero-btn-ghost:hover { border-color: rgba(245,245,243,0.55) !important; }
+      `}</style>
+
       <div style={{ marginBottom: isMobile ? '36px' : '48px' }}>
         <p
           style={{
@@ -94,6 +101,7 @@ export default function Hero() {
         >
           <a
             href="#inquire"
+            className="hero-btn-primary"
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontWeight: 500,
@@ -108,12 +116,14 @@ export default function Hero() {
               whiteSpace: 'nowrap',
               textAlign: 'center',
               display: 'block',
+              cursor: 'pointer',
             }}
           >
             Start a Sourcing Inquiry
           </a>
           <a
             href="#capabilities"
+            className="hero-btn-ghost"
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontWeight: 400,
@@ -129,6 +139,7 @@ export default function Hero() {
               whiteSpace: 'nowrap',
               textAlign: 'center',
               display: 'block',
+              cursor: 'pointer',
             }}
           >
             See Capabilities →
@@ -156,7 +167,7 @@ export default function Hero() {
                   fontSize: '10px',
                   textTransform: 'uppercase',
                   letterSpacing: '0.12em',
-                  color: 'rgba(245,245,243,0.35)',
+                  color: 'rgba(245,245,243,0.55)',
                 }}
               >
                 {stat.label}

@@ -122,11 +122,18 @@ export default function Nav() {
           color: '#F5F5F3',
           border: '0.5px solid rgba(245,245,243,0.25)',
           borderRadius: '100px',
-          padding: '5px 14px',
+          padding: '8px 20px',
           background: 'transparent',
           cursor: 'pointer',
           whiteSpace: 'nowrap',
           textDecoration: 'none',
+          transition: 'border-color 200ms ease-out',
+        }}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,245,243,0.55)';
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,245,243,0.25)';
         }}
       >
         Inquire

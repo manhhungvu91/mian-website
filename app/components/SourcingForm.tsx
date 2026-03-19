@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 export default function SourcingForm() {
   const [isMobile, setIsMobile] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -18,13 +20,13 @@ export default function SourcingForm() {
     'All communications confidential',
   ];
 
-  const fields: { label: string; placeholder: string; multiline: boolean }[] = [
-    { label: 'Your Name', placeholder: 'Full name', multiline: false },
-    { label: 'Brand or Company', placeholder: 'Brand or company name', multiline: false },
-    { label: 'Product Category', placeholder: 'e.g. Denim, Knitwear, Active', multiline: false },
-    { label: 'Estimated MOQ', placeholder: 'e.g. 500 pcs per style', multiline: false },
-    { label: 'Country of Origin of Buyer', placeholder: 'Your country', multiline: false },
-    { label: 'Tell us about your project', placeholder: 'Brief description of your project, timeline, and any special requirements...', multiline: true },
+  const fields: { label: string; placeholder: string; multiline: boolean; id: string }[] = [
+    { id: 'name', label: 'Your Name', placeholder: 'Full name', multiline: false },
+    { id: 'company', label: 'Brand or Company', placeholder: 'Brand or company name', multiline: false },
+    { id: 'category', label: 'Product Category', placeholder: 'e.g. Denim, Knitwear, Active', multiline: false },
+    { id: 'moq', label: 'Estimated MOQ', placeholder: 'e.g. 500 pcs per style', multiline: false },
+    { id: 'country', label: 'Country of Origin of Buyer', placeholder: 'Your country', multiline: false },
+    { id: 'project', label: 'Tell us about your project', placeholder: 'Brief description of your project, timeline, and any special requirements...', multiline: true },
   ];
 
   const baseInputStyle: React.CSSProperties = {
@@ -40,6 +42,15 @@ export default function SourcingForm() {
     padding: 0,
   };
 
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setSubmitted(true);
+    }, 1500);
+  }
+
   return (
     <section
       id="inquire"
@@ -52,6 +63,7 @@ export default function SourcingForm() {
       <style>{`
         .mian-input::placeholder { color: rgba(13,13,11,0.35); }
         .mian-input:focus { outline: none; }
+        .mian-submit:hover { background: #2E2E2C !important; }
       `}</style>
 
       <div
@@ -130,82 +142,115 @@ export default function SourcingForm() {
 
         {/* Right column — form */}
         <div>
-          <form style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-            {fields.map((field) => (
-              <div
-                key={field.label}
+          {submitted ? (
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '320px',
+                textAlign: 'center',
+                padding: '48px 32px',
+              }}
+            >
+              <p
                 style={{
-                  background: '#FFFFFF',
-                  border: '0.5px solid rgba(13,13,11,0.10)',
-                  padding: '14px 16px',
-                  borderRadius: 0,
+                  fontFamily: "'Playfair Display', serif",
+                  fontStyle: 'italic',
+                  fontWeight: 400,
+                  fontSize: isMobile ? '22px' : '26px',
+                  color: '#0D0D0B',
+                  lineHeight: 1.4,
                 }}
               >
-                <label
+                Thank you. Our sourcing team will respond within 24 hours.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              {fields.map((field) => (
+                <div
+                  key={field.id}
                   style={{
-                    fontFamily: "'Plus Jakarta Sans', sans-serif",
-                    fontWeight: 600,
-                    fontSize: '9.5px',
-                    letterSpacing: '0.14em',
-                    textTransform: 'uppercase',
-                    color: '#8A8A86',
-                    marginBottom: '4px',
-                    display: 'block',
+                    background: '#FFFFFF',
+                    border: '0.5px solid rgba(13,13,11,0.10)',
+                    padding: '14px 16px',
+                    borderRadius: 0,
                   }}
                 >
-                  {field.label}
-                </label>
-                {field.multiline ? (
-                  <textarea
-                    placeholder={field.placeholder}
-                    className="mian-input"
-                    style={{ ...baseInputStyle, minHeight: '80px' }}
-                  />
-                ) : (
-                  <input
-                    type="text"
-                    placeholder={field.placeholder}
-                    className="mian-input"
-                    style={baseInputStyle}
-                  />
-                )}
-              </div>
-            ))}
+                  <label
+                    htmlFor={field.id}
+                    style={{
+                      fontFamily: "'Plus Jakarta Sans', sans-serif",
+                      fontWeight: 600,
+                      fontSize: '9.5px',
+                      letterSpacing: '0.14em',
+                      textTransform: 'uppercase',
+                      color: '#8A8A86',
+                      marginBottom: '4px',
+                      display: 'block',
+                    }}
+                  >
+                    {field.label}
+                  </label>
+                  {field.multiline ? (
+                    <textarea
+                      id={field.id}
+                      placeholder={field.placeholder}
+                      className="mian-input"
+                      style={{ ...baseInputStyle, minHeight: '80px' }}
+                    />
+                  ) : (
+                    <input
+                      id={field.id}
+                      type="text"
+                      placeholder={field.placeholder}
+                      className="mian-input"
+                      style={baseInputStyle}
+                    />
+                  )}
+                </div>
+              ))}
 
-            <button
-              type="submit"
-              style={{
-                width: '100%',
-                background: '#0D0D0B',
-                color: '#F5F5F3',
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
-                fontWeight: 500,
-                fontSize: '12px',
-                letterSpacing: '0.16em',
-                textTransform: 'uppercase',
-                padding: '16px',
-                border: 'none',
-                cursor: 'pointer',
-                borderRadius: 0,
-                marginTop: '2px',
-              }}
-            >
-              Submit Sourcing Inquiry →
-            </button>
+              <button
+                type="submit"
+                disabled={loading}
+                className="mian-submit"
+                style={{
+                  width: '100%',
+                  background: '#0D0D0B',
+                  color: '#F5F5F3',
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '12px',
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  padding: '16px',
+                  border: 'none',
+                  cursor: loading ? 'not-allowed' : 'pointer',
+                  borderRadius: 0,
+                  marginTop: '2px',
+                  opacity: loading ? 0.7 : 1,
+                  transition: 'background 200ms ease-out, opacity 200ms ease-out',
+                }}
+              >
+                {loading ? 'Sending...' : 'Submit Sourcing Inquiry →'}
+              </button>
 
-            <p
-              style={{
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
-                fontWeight: 300,
-                fontSize: '11px',
-                color: '#8A8A86',
-                textAlign: 'center',
-                marginTop: '10px',
-              }}
-            >
-              Response within 24 hours · All communications confidential
-            </p>
-          </form>
+              <p
+                style={{
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  fontWeight: 300,
+                  fontSize: '12px',
+                  color: '#8A8A86',
+                  textAlign: 'center',
+                  marginTop: '16px',
+                }}
+              >
+                Or reach us directly at sourcing@mianapparel.com
+              </p>
+            </form>
+          )}
         </div>
       </div>
     </section>

@@ -13,12 +13,12 @@ export default function Certifications() {
   }, []);
 
   const certs = [
-    { badge: 'W', name: 'WRAP' },
-    { badge: 'H', name: 'Higg Index' },
-    { badge: 'FT', name: 'Fair Trade' },
-    { badge: 'CT', name: 'C-TPAT' },
-    { badge: 'BW', name: 'BetterWork' },
-    { badge: 'SX', name: 'Sedex SMETA' },
+    'WRAP',
+    'Higg Index',
+    'Fair Trade',
+    'C-TPAT',
+    'BetterWork',
+    'Sedex SMETA',
   ];
 
   return (
@@ -53,52 +53,28 @@ export default function Certifications() {
 
       <div
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: '3px',
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '8px',
           marginTop: '48px',
         }}
       >
         {certs.map((cert) => (
-          <div
-            key={cert.badge}
+          <span
+            key={cert}
             style={{
-              background: '#2E2E2C',
-              padding: isMobile ? '18px 20px' : '20px 28px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '14px',
+              background: 'rgba(245,245,243,0.06)',
+              border: '0.5px solid rgba(245,245,243,0.2)',
+              padding: '6px 16px',
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontWeight: 400,
+              fontSize: '13px',
+              color: '#B8B4AA',
+              whiteSpace: 'nowrap',
             }}
           >
-            <div
-              style={{
-                width: '28px',
-                height: '28px',
-                background: '#3D3B32',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '9px',
-                fontWeight: 700,
-                color: '#8A8A86',
-                flexShrink: 0,
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
-              }}
-            >
-              {cert.badge}
-            </div>
-            <span
-              style={{
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
-                fontWeight: 400,
-                fontSize: '14px',
-                color: '#B8B4AA',
-                letterSpacing: '0.04em',
-              }}
-            >
-              {cert.name}
-            </span>
-          </div>
+            {cert}
+          </span>
         ))}
       </div>
 
@@ -107,7 +83,7 @@ export default function Certifications() {
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontWeight: 300,
           fontSize: '14px',
-          color: '#4A4A47',
+          color: '#8A8A86',
           lineHeight: 1.75,
           marginTop: '48px',
         }}

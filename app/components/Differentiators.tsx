@@ -145,7 +145,7 @@ export default function Differentiators() {
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 300,
                 fontSize: '15px',
-                color: '#6E6E6A',
+                color: '#4A4A47',
                 lineHeight: 1.75,
               }}
             >

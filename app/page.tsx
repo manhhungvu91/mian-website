@@ -12,10 +12,10 @@ export default function Home() {
     <main>
       <Hero />
       <Ticker />
-      <Differentiators />
-      <PullQuote />
-      <StatsBar />
-      <Certifications />
+      <div id="capabilities"><Differentiators /></div>
+      <div id="about"><PullQuote /></div>
+      <div id="products"><StatsBar /></div>
+      <div id="factories"><Certifications /></div>
       <SourcingForm />
       <Footer />
     </main>
