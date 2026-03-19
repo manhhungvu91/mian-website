@@ -48,7 +48,7 @@ export default function Nav() {
           fontSize: '13px',
           letterSpacing: '0.22em',
           textTransform: 'uppercase',
-          color: '#FFFFFF',
+          color: '#F5F5F3',
           whiteSpace: 'nowrap',
         }}
       >
@@ -119,7 +119,7 @@ export default function Nav() {
           fontSize: '9.5px',
           letterSpacing: '0.10em',
           textTransform: 'uppercase',
-          color: '#FFFFFF',
+          color: '#F5F5F3',
           border: '0.5px solid rgba(245,245,243,0.25)',
           borderRadius: '100px',
           padding: '5px 14px',
