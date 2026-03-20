@@ -3,22 +3,22 @@ export default function Capabilities() {
     {
       number: '01',
       title: 'SAMPLE IN\n72 HOURS',
-      body: '500 pieces or 50,000. From an approved tech pack to a physical sample in 72 hours. We have the system, the team, and the production capacity to match any timeline your brand needs.',
+      body: '500 pieces or 500,000. Physical sample from approved tech pack in 72 hours. The system exists. The team is ready. The capacity is there.',
     },
     {
       number: '02',
       title: 'DIGITAL\nDEVELOPMENT',
-      body: 'CLO3D and Style 3D digital development reduces your sample rounds from four to an average of 1.8. Every fit issue resolved before fabric is cut. Faster to market. Less waste. Fewer surprises.',
+      body: 'CLO3D and Style 3D development cuts average sample rounds to under two. Fit resolved before fabric is touched. Faster to market. Considerably less waste.',
     },
     {
       number: '03',
       title: 'FULL VERTICAL\nINTEGRATION',
-      body: 'Fabric sourcing, development, washing, dyeing, printing, and final delivery — all under one roof. One partner. Full control. No broken chain between your design intention and the finished garment.',
+      body: 'Sourcing, development, washing, dyeing, printing, delivery. One roof. One partner. Nothing lost between the design intention and what arrives.',
     },
     {
       number: '04',
-      title: 'BEYOND\nFOB PRICING',
-      body: 'Our executives think in retail margins and brand calendars, not just CM rates. We understand the distribution pressure you are managing, the sell-through uncertainty, and what it costs when a product is wrong.',
+      title: 'BEYOND THE\nBRIEF',
+      body: 'We understand margin pressure, seasonal planning, and what happens when a product misses. The conversation is more useful because of it.',
     },
   ]
 
@@ -60,8 +60,8 @@ export default function Capabilities() {
 
               {/* Title */}
               <h3 style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
+                fontFamily: "'Archivo Black', sans-serif",
+                fontWeight: 400,
                 fontSize: 'clamp(32px, 3.5vw, 52px)',
                 lineHeight: 0.9, letterSpacing: '-0.01em',
                 textTransform: 'uppercase', color: '#0F0F0F',

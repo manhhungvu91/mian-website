@@ -1,5 +1,4 @@
 export default function ClientStrip() {
-  const clients = ['ZARA', 'H&M', 'COSTCO', 'WALMART', 'TARGET', 'EDDIE BAUER']
   return (
     <section style={{
       background: '#0F0F0F',
@@ -9,17 +8,14 @@ export default function ClientStrip() {
     }}>
       <div style={{
         display: 'flex', justifyContent: 'center',
-        alignItems: 'center', gap: '48px',
-        flexWrap: 'wrap', padding: '0 40px',
+        alignItems: 'center', padding: '0 40px',
       }}>
-        {clients.map(c => (
-          <span key={c} style={{
-            fontFamily: "'IBM Plex Mono', monospace",
-            fontWeight: 300, fontSize: '9px',
-            letterSpacing: '0.35em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.22)',
-          }}>{c}</span>
-        ))}
+        <span style={{
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontWeight: 300, fontSize: '9px',
+          letterSpacing: '0.35em', textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.22)',
+        }}>PRODUCING FOR THE BRANDS SHAPING GLOBAL FASHION</span>
       </div>
     </section>
   )

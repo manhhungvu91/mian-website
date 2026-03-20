@@ -34,12 +34,12 @@ export default function Hero() {
           letterSpacing: '0.28em', textTransform: 'uppercase',
           color: 'rgba(255,255,255,0.35)',
           marginBottom: '20px',
-        }}>MIAN GROUP · VIETNAM · EST. 2000</p>
+        }}>VIETNAM · EST. 2000</p>
 
         {/* Headline */}
         <h1 style={{
-          fontFamily: "'Barlow Condensed', sans-serif",
-          fontWeight: 700,
+          fontFamily: "'Archivo Black', sans-serif",
+          fontWeight: 400,
           fontSize: 'clamp(72px, 11.5vw, 168px)',
           lineHeight: 0.86,
           letterSpacing: '-0.01em',
@@ -57,7 +57,7 @@ export default function Hero() {
           letterSpacing: '0.16em', textTransform: 'uppercase',
           color: 'rgba(255,255,255,0.3)',
           marginBottom: '40px',
-        }}>7 FACTORIES &nbsp;·&nbsp; 8.8M PCS / MONTH &nbsp;·&nbsp; 12,000+ WORKERS &nbsp;·&nbsp; 172 PRODUCTION LINES</p>
+        }}>7 FACTORIES · 172 PRODUCTION LINES · 8.8M PCS MONTHLY</p>
 
         {/* CTA */}
         <a href="#inquire" style={{

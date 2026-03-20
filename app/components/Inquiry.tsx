@@ -47,10 +47,10 @@ export default function Inquiry() {
             fontWeight: 400, fontSize: '9px',
             letterSpacing: '0.3em', textTransform: 'uppercase',
             color: '#9A9A96', display: 'block', marginBottom: '16px',
-          }}>START A CONVERSATION</span>
+          }}>START HERE</span>
           <h2 style={{
-            fontFamily: "'Barlow Condensed', sans-serif",
-            fontWeight: 700, fontSize: 'clamp(48px, 5.5vw, 72px)',
+            fontFamily: "'Archivo Black', sans-serif",
+            fontWeight: 400, fontSize: 'clamp(48px, 5.5vw, 72px)',
             lineHeight: 0.88, textTransform: 'uppercase', color: '#0F0F0F',
             marginBottom: '28px',
           }}>WORK<br />WITH<br />MIAN.</h2>
@@ -58,7 +58,7 @@ export default function Inquiry() {
             fontFamily: 'Inter, sans-serif', fontWeight: 300,
             fontSize: '14px', lineHeight: 1.85, color: '#5A5A56',
             marginBottom: '16px',
-          }}>Fill in the form. Our team responds within 24 hours. Direct — no agents, no intermediaries.</p>
+          }}>Fill in the form. Direct response within 24 hours. No agents between you and the people doing the work.</p>
           <p style={{
             fontFamily: "'IBM Plex Mono', monospace",
             fontWeight: 300, fontSize: '9px',
@@ -71,7 +71,7 @@ export default function Inquiry() {
           {sent ? (
             <div style={{ padding: '80px 0' }}>
               <h3 style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
+                fontFamily: "'Archivo Black', sans-serif",
                 fontWeight: 400, fontSize: '42px',
                 fontStyle: 'italic', color: '#0F0F0F',
                 marginBottom: '16px',

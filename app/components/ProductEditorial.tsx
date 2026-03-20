@@ -1,9 +1,9 @@
 export default function ProductEditorial() {
   const items = [
-    { label: 'PRECISION TAILORING', sub: 'Compact stretch wool · FW26 development sample', tone: '#1A1A1A' },
-    { label: 'TECHNICAL OUTERWEAR', sub: 'Bonded ripstop · SS26 client sample', tone: '#2E2E2A' },
-    { label: 'RELAXED TAILORING', sub: 'Washed linen · Core program', tone: '#3A3630' },
-    { label: 'CONTEMPORARY CASUAL', sub: 'Organic cotton terry · SS26', tone: '#262624' },
+    { label: 'PRECISION TAILORING', sub: 'Compact stretch wool · FW26', tone: '#1A1A1A' },
+    { label: 'TECHNICAL OUTERWEAR', sub: 'Bonded ripstop · SS26', tone: '#2E2E2A' },
+    { label: 'RELAXED TAILORING', sub: 'Washed linen · Core', tone: '#3A3630' },
+    { label: 'CONTEMPORARY CASUAL', sub: 'Organic terry · SS26', tone: '#262624' },
   ]
 
   return (
@@ -26,8 +26,8 @@ export default function ProductEditorial() {
               color: 'rgba(255,255,255,0.3)', display: 'block', marginBottom: '16px',
             }}>AESTHETIC DIRECTION</span>
             <h2 style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 700,
+              fontFamily: "'Archivo Black', sans-serif",
+              fontWeight: 400,
               fontSize: 'clamp(48px, 6vw, 80px)',
               lineHeight: 0.88, letterSpacing: '-0.01em',
               textTransform: 'uppercase', color: '#FFFFFF',
@@ -38,7 +38,7 @@ export default function ProductEditorial() {
             fontSize: '13px', lineHeight: 1.85,
             color: 'rgba(255,255,255,0.35)',
             maxWidth: '280px', textAlign: 'right',
-          }}>Our team carries the aesthetic literacy of the brands we admire — COS, Our Legacy, The Row, Aurallee. That understanding shapes every development decision.</p>
+          }}>Our team moves in the same aesthetic world as the brands we work with. That understanding is present in every development decision — not just the ones that are obvious.</p>
         </div>
 
         {/* 4-column product grid */}
@@ -60,7 +60,7 @@ export default function ProductEditorial() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
                   <span style={{
-                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontFamily: "'Archivo Black', sans-serif",
                     fontWeight: 300, fontSize: '11px',
                     letterSpacing: '0.3em', textTransform: 'uppercase',
                     color: 'rgba(255,255,255,0.08)',
@@ -95,7 +95,7 @@ export default function ProductEditorial() {
             fontWeight: 300, fontSize: '8px',
             letterSpacing: '0.18em', textTransform: 'uppercase',
             color: 'rgba(255,255,255,0.18)',
-          }}>IMAGES: GENERATIVE &amp; EDITORIAL PHOTOGRAPHY IN PRODUCTION — AVAILABLE Q3 2026</p>
+          }}>EDITORIAL PHOTOGRAPHY IN PRODUCTION — Q3 2026</p>
         </div>
       </div>
     </section>

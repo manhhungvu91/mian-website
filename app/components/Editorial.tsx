@@ -22,8 +22,8 @@ export default function Editorial() {
               color: '#9A9A96', display: 'block', marginBottom: '20px',
             }}>THE STUDIO</span>
             <h2 style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 700,
+              fontFamily: "'Archivo Black', sans-serif",
+              fontWeight: 400,
               fontSize: 'clamp(56px, 7.5vw, 108px)',
               lineHeight: 0.86, letterSpacing: '-0.01em',
               textTransform: 'uppercase', color: '#0F0F0F',
@@ -37,14 +37,14 @@ export default function Editorial() {
               fontSize: '15px', lineHeight: 1.85, color: '#5A5A56',
               maxWidth: '400px',
             }}>
-              MIAN operates at the intersection of fashion literacy and manufacturing precision. Our executives think in brand calendars and retail margins. Our development team works in CLO3D and fabric boards. Our factories deliver 500 pieces in 72 hours or 8.8 million in a month.
+              We operate where manufacturing precision meets fashion intelligence. Development, sourcing, production — run by people who understand what the clothes are for.
             </p>
             <p style={{
               fontFamily: 'Inter, sans-serif', fontWeight: 300,
               fontSize: '15px', lineHeight: 1.85, color: '#9A9A96',
               maxWidth: '400px', marginTop: '20px',
             }}>
-              Vietnam. Global standards. The partner your brand has been looking for.
+              Vietnam. Global standards. Built for brands that take the work seriously.
             </p>
           </div>
         </div>
@@ -124,12 +124,12 @@ export default function Editorial() {
             fontFamily: "'IBM Plex Mono', monospace",
             fontSize: '8px', letterSpacing: '0.2em',
             color: '#9A9A96', textTransform: 'uppercase',
-          }}>MIAN GROUP R&amp;D CENTER — DESIGNED BY IDEE ARCHITECTS, 2024</span>
+          }}>MIAN GROUP R&amp;D CENTER — IDEE ARCHITECTS, 2024</span>
           <span style={{
             fontFamily: "'IBM Plex Mono', monospace",
             fontSize: '8px', letterSpacing: '0.2em',
             color: '#C8C8C3', textTransform: 'uppercase',
-          }}>FEATURED ON ARCHDAILY</span>
+          }}>ARCHDAILY</span>
         </div>
       </div>
     </section>

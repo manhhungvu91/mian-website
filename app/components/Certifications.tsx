@@ -21,8 +21,8 @@ export default function Certifications() {
               color: 'rgba(255,255,255,0.3)', display: 'block', marginBottom: '16px',
             }}>COMPLIANCE</span>
             <h3 style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 600, fontSize: 'clamp(32px, 3.5vw, 48px)',
+              fontFamily: "'Archivo Black', sans-serif",
+              fontWeight: 400, fontSize: 'clamp(32px, 3.5vw, 48px)',
               lineHeight: 0.9, textTransform: 'uppercase',
               color: '#FFFFFF', marginBottom: '24px',
             }}>BUILT TO THE<br />WORLD&apos;S MOST<br />DEMANDING<br />STANDARDS.</h3>
@@ -30,7 +30,7 @@ export default function Certifications() {
               fontFamily: 'Inter, sans-serif', fontWeight: 300,
               fontSize: '13px', lineHeight: 1.8,
               color: 'rgba(255,255,255,0.35)',
-            }}>Active certifications renewed annually. Full audit documentation available on request.</p>
+            }}>Active certifications across social compliance, environmental standards, and worker welfare. Full documentation on request.</p>
           </div>
 
           {/* Right — cert grid */}
