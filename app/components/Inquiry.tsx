@@ -31,7 +31,7 @@ export default function Inquiry() {
   return (
     <section id="inquire" style={{
       background: '#FFFFFF',
-      padding: '160px 80px',
+      padding: '120px 80px',
       borderTop: '1px solid #E8E8E4',
     }}>
       <div style={{
@@ -50,7 +50,7 @@ export default function Inquiry() {
           }}>START HERE</span>
           <h2 style={{
             fontFamily: "'Archivo Black', sans-serif",
-            fontWeight: 400, fontSize: 'clamp(48px, 5.5vw, 72px)',
+            fontWeight: 400, fontSize: 'clamp(32px, 4vw, 52px)',
             lineHeight: 0.88, textTransform: 'uppercase', color: '#0F0F0F',
             marginBottom: '28px',
           }}>WORK<br />WITH<br />MIAN.</h2>

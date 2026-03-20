@@ -33,21 +33,21 @@ export default function Hero() {
           fontWeight: 300, fontSize: '9px',
           letterSpacing: '0.28em', textTransform: 'uppercase',
           color: 'rgba(255,255,255,0.35)',
-          marginBottom: '20px',
+          marginBottom: '16px',
         }}>VIETNAM · EST. 2000</p>
 
         {/* Headline */}
         <h1 style={{
           fontFamily: "'Archivo Black', sans-serif",
           fontWeight: 400,
-          fontSize: 'clamp(72px, 11.5vw, 168px)',
-          lineHeight: 0.86,
+          fontSize: 'clamp(44px, 6.5vw, 88px)',
+          lineHeight: 0.92,
           letterSpacing: '-0.01em',
           textTransform: 'uppercase',
           color: '#FFFFFF',
           marginBottom: '36px',
         }}>
-          WHERE<br />FASHION<br />IS MADE.
+          WHERE FASHION IS MADE.
         </h1>
 
         {/* Data line */}

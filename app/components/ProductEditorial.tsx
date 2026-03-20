@@ -9,7 +9,7 @@ export default function ProductEditorial() {
   return (
     <section style={{
       background: '#0F0F0F',
-      padding: '160px 80px',
+      padding: '120px 80px',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
@@ -28,10 +28,10 @@ export default function ProductEditorial() {
             <h2 style={{
               fontFamily: "'Archivo Black', sans-serif",
               fontWeight: 400,
-              fontSize: 'clamp(48px, 6vw, 80px)',
+              fontSize: 'clamp(32px, 4vw, 56px)',
               lineHeight: 0.88, letterSpacing: '-0.01em',
               textTransform: 'uppercase', color: '#FFFFFF',
-            }}>WE KNOW<br />WHAT GOOD<br />CLOTHES LOOK LIKE.</h2>
+            }}>WE KNOW WHAT GOOD CLOTHES LOOK LIKE.</h2>
           </div>
           <p style={{
             fontFamily: 'Inter, sans-serif', fontWeight: 300,

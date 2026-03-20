@@ -25,7 +25,7 @@ export default function Capabilities() {
   return (
     <section id="capabilities" style={{
       background: '#FFFFFF',
-      padding: '0 80px 160px',
+      padding: '0 80px 120px',
       borderTop: '1px solid #E8E8E4',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
@@ -62,7 +62,7 @@ export default function Capabilities() {
               <h3 style={{
                 fontFamily: "'Archivo Black', sans-serif",
                 fontWeight: 400,
-                fontSize: 'clamp(32px, 3.5vw, 52px)',
+                fontSize: 'clamp(26px, 2.8vw, 40px)',
                 lineHeight: 0.9, letterSpacing: '-0.01em',
                 textTransform: 'uppercase', color: '#0F0F0F',
                 whiteSpace: 'pre-line',
@@ -71,7 +71,7 @@ export default function Capabilities() {
               {/* Body */}
               <p style={{
                 fontFamily: 'Inter, sans-serif', fontWeight: 300,
-                fontSize: '14px', lineHeight: 1.85,
+                fontSize: '13px', lineHeight: 1.85,
                 color: '#5A5A56', maxWidth: '420px',
                 paddingTop: '6px',
               }}>{cap.body}</p>

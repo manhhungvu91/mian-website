@@ -4,7 +4,7 @@ export default function Certifications() {
   return (
     <section style={{
       background: '#0F0F0F',
-      padding: '120px 80px',
+      padding: '120px 80px 120px',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
@@ -22,7 +22,7 @@ export default function Certifications() {
             }}>COMPLIANCE</span>
             <h3 style={{
               fontFamily: "'Archivo Black', sans-serif",
-              fontWeight: 400, fontSize: 'clamp(32px, 3.5vw, 48px)',
+              fontWeight: 400, fontSize: 'clamp(24px, 2.8vw, 36px)',
               lineHeight: 0.9, textTransform: 'uppercase',
               color: '#FFFFFF', marginBottom: '24px',
             }}>BUILT TO THE<br />WORLD&apos;S MOST<br />DEMANDING<br />STANDARDS.</h3>

@@ -2,7 +2,7 @@ export default function Editorial() {
   return (
     <section id="studio" style={{
       background: '#FFFFFF',
-      padding: '160px 80px 120px',
+      padding: '120px 80px 120px',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
@@ -10,8 +10,8 @@ export default function Editorial() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          gap: '80px',
-          marginBottom: '100px',
+          gap: '48px',
+          marginBottom: '40px',
           alignItems: 'end',
         }}>
           <div>
@@ -24,24 +24,24 @@ export default function Editorial() {
             <h2 style={{
               fontFamily: "'Archivo Black', sans-serif",
               fontWeight: 400,
-              fontSize: 'clamp(56px, 7.5vw, 108px)',
+              fontSize: 'clamp(36px, 4.5vw, 64px)',
               lineHeight: 0.86, letterSpacing: '-0.01em',
               textTransform: 'uppercase', color: '#0F0F0F',
             }}>
-              NOT A<br />FACTORY.<br />A STUDIO.
+              NOT A FACTORY.<br />A STUDIO.
             </h2>
           </div>
           <div style={{ paddingBottom: '8px' }}>
             <p style={{
               fontFamily: 'Inter, sans-serif', fontWeight: 300,
-              fontSize: '15px', lineHeight: 1.85, color: '#5A5A56',
+              fontSize: '14px', lineHeight: 1.85, color: '#5A5A56',
               maxWidth: '400px',
             }}>
               We operate where manufacturing precision meets fashion intelligence. Development, sourcing, production — run by people who understand what the clothes are for.
             </p>
             <p style={{
               fontFamily: 'Inter, sans-serif', fontWeight: 300,
-              fontSize: '15px', lineHeight: 1.85, color: '#9A9A96',
+              fontSize: '14px', lineHeight: 1.85, color: '#9A9A96',
               maxWidth: '400px', marginTop: '20px',
             }}>
               Vietnam. Global standards. Built for brands that take the work seriously.

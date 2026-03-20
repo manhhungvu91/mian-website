@@ -2,7 +2,7 @@ export default function RDCenter() {
   return (
     <section style={{
       background: '#0F0F0F',
-      padding: '160px 80px',
+      padding: '120px 80px',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
@@ -17,7 +17,7 @@ export default function RDCenter() {
           <h2 style={{
             fontFamily: "'Archivo Black', sans-serif",
             fontWeight: 400,
-            fontSize: 'clamp(48px, 6vw, 80px)',
+            fontSize: 'clamp(28px, 3.5vw, 48px)',
             lineHeight: 0.88, letterSpacing: '-0.01em',
             textTransform: 'uppercase', color: '#FFFFFF',
             maxWidth: '800px',
@@ -86,7 +86,7 @@ export default function RDCenter() {
             }}>
               <p style={{
                 fontFamily: 'Inter, sans-serif', fontWeight: 300,
-                fontSize: '13.5px', lineHeight: 1.85,
+                fontSize: '13px', lineHeight: 1.85,
                 color: 'rgba(255,255,255,0.5)',
                 marginBottom: '28px',
               }}>
