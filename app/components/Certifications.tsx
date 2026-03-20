@@ -3,8 +3,8 @@ export default function Certifications() {
 
   return (
     <section style={{
-      background: '#0F0F0F',
-      padding: '120px 80px 120px',
+      background: '#FFFFFF',
+      padding: '120px 80px',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
@@ -18,18 +18,18 @@ export default function Certifications() {
               fontFamily: "'IBM Plex Mono', monospace",
               fontWeight: 400, fontSize: '9px',
               letterSpacing: '0.3em', textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.3)', display: 'block', marginBottom: '16px',
+              color: '#9A9A96', display: 'block', marginBottom: '16px',
             }}>COMPLIANCE</span>
             <h3 style={{
               fontFamily: "'Archivo', sans-serif",
-              fontWeight: 400, fontSize: 'clamp(24px, 2.8vw, 36px)',
+              fontWeight: 400, fontSize: 'clamp(26px, 3.1vw, 40px)',
               lineHeight: 0.9, textTransform: 'uppercase',
-              color: '#FFFFFF', marginBottom: '24px',
+              color: '#0F0F0F', marginBottom: '24px',
             }}>BUILT TO THE<br />WORLD&apos;S MOST<br />DEMANDING<br />STANDARDS.</h3>
             <p style={{
               fontFamily: 'Inter, sans-serif', fontWeight: 300,
               fontSize: '13px', lineHeight: 1.8,
-              color: 'rgba(255,255,255,0.35)',
+              color: '#9A9A96',
             }}>Active certifications across social compliance, environmental standards, and worker welfare. Full documentation on request.</p>
           </div>
 
@@ -41,13 +41,13 @@ export default function Certifications() {
             {certs.map((cert, i) => (
               <div key={i} style={{
                 padding: '28px 24px',
-                borderTop: '1px solid rgba(255,255,255,0.06)',
-                borderRight: (i + 1) % 3 !== 0 ? '1px solid rgba(255,255,255,0.06)' : 'none',
+                borderTop: '1px solid rgba(15,15,15,0.06)',
+                borderRight: (i + 1) % 3 !== 0 ? '1px solid rgba(15,15,15,0.06)' : 'none',
               }}>
                 <span style={{
                   fontFamily: 'Inter, sans-serif',
                   fontWeight: 400, fontSize: '13px',
-                  color: 'rgba(255,255,255,0.45)',
+                  color: '#5A5A56',
                   letterSpacing: '0.02em',
                 }}>{cert}</span>
               </div>

@@ -1,7 +1,7 @@
 export default function RDCenter() {
   return (
     <section style={{
-      background: '#0F0F0F',
+      background: '#FFFFFF',
       padding: '120px 80px',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
@@ -12,14 +12,14 @@ export default function RDCenter() {
             fontFamily: "'IBM Plex Mono', monospace",
             fontWeight: 400, fontSize: '9px',
             letterSpacing: '0.3em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.3)', display: 'block', marginBottom: '16px',
+            color: '#9A9A96', display: 'block', marginBottom: '16px',
           }}>THE CENTER</span>
           <h2 style={{
             fontFamily: "'Archivo', sans-serif",
             fontWeight: 400,
-            fontSize: 'clamp(28px, 3.5vw, 48px)',
+            fontSize: 'clamp(31px, 3.9vw, 53px)',
             lineHeight: 0.88, letterSpacing: '-0.01em',
-            textTransform: 'uppercase', color: '#FFFFFF',
+            textTransform: 'uppercase', color: '#0F0F0F',
             maxWidth: '800px',
           }}>MIAN GROUP<br />R&amp;D CENTER</h2>
         </div>
@@ -80,14 +80,14 @@ export default function RDCenter() {
 
             {/* Text block */}
             <div style={{
-              background: '#181818',
+              background: '#F4F4F2',
               padding: '36px 32px',
               flex: 1,
             }}>
               <p style={{
                 fontFamily: 'Inter, sans-serif', fontWeight: 300,
                 fontSize: '13px', lineHeight: 1.85,
-                color: 'rgba(255,255,255,0.5)',
+                color: '#5A5A56',
                 marginBottom: '28px',
               }}>
                 Designed by Idee Architects, completed in 2024. Sample rooms, showroom, commercial offices, and meeting suites — built to the standard of the work that happens inside them.
@@ -102,19 +102,19 @@ export default function RDCenter() {
                 <div key={label} style={{
                   display: 'flex', justifyContent: 'space-between',
                   alignItems: 'baseline', padding: '12px 0',
-                  borderTop: '1px solid rgba(255,255,255,0.06)',
+                  borderTop: '1px solid rgba(15,15,15,0.06)',
                 }}>
                   <span style={{
                     fontFamily: "'Archivo', sans-serif",
                     fontWeight: 400, fontSize: '16px',
-                    letterSpacing: '0.02em', color: '#FFFFFF',
+                    letterSpacing: '0.02em', color: '#0F0F0F',
                     textTransform: 'uppercase',
                   }}>{val}</span>
                   <span style={{
                     fontFamily: "'IBM Plex Mono', monospace",
                     fontWeight: 300, fontSize: '8px',
                     letterSpacing: '0.18em', textTransform: 'uppercase',
-                    color: 'rgba(255,255,255,0.25)',
+                    color: '#9A9A96',
                   }}>{label}</span>
                 </div>
               ))}
@@ -124,7 +124,7 @@ export default function RDCenter() {
                 fontFamily: "'IBM Plex Mono', monospace",
                 fontWeight: 300, fontSize: '8px',
                 letterSpacing: '0.14em', textTransform: 'uppercase',
-                color: 'rgba(255,255,255,0.15)',
+                color: '#C8C8C3',
                 marginTop: '24px',
               }}>Featured on ArchDaily · archdaily.com/1026064</p>
             </div>

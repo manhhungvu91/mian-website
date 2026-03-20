@@ -9,7 +9,7 @@ export default function Stats() {
 
   return (
     <section style={{
-      background: '#0F0F0F',
+      background: '#FFFFFF',
     }}>
       <div style={{
         maxWidth: '1400px', margin: '0 auto',
@@ -18,20 +18,20 @@ export default function Stats() {
         {stats.map((s, i) => (
           <div key={i} style={{
             padding: '64px 32px',
-            borderRight: i < 4 ? '1px solid rgba(255,255,255,0.07)' : 'none',
+            borderRight: i < 4 ? '1px solid #E8E8E4' : 'none',
             textAlign: 'center',
           }}>
             <div style={{
               fontFamily: "'Archivo', sans-serif",
               fontWeight: 400, fontSize: 'clamp(52px, 5vw, 72px)',
               lineHeight: 1, letterSpacing: '-0.02em',
-              color: '#FFFFFF', marginBottom: '12px',
+              color: '#0F0F0F', marginBottom: '12px',
             }}>{s.n}</div>
             <div style={{
               fontFamily: "'IBM Plex Mono', monospace",
               fontWeight: 300, fontSize: '8px',
               letterSpacing: '0.18em', textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.35)', whiteSpace: 'pre-line', lineHeight: 1.6,
+              color: '#9A9A96', whiteSpace: 'pre-line', lineHeight: 1.6,
             }}>{s.l}</div>
           </div>
         ))}

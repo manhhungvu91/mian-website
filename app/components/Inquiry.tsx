@@ -49,7 +49,7 @@ export default function Inquiry() {
           }}>START HERE</span>
           <h2 style={{
             fontFamily: "'Archivo', sans-serif",
-            fontWeight: 400, fontSize: 'clamp(32px, 4vw, 52px)',
+            fontWeight: 400, fontSize: 'clamp(35px, 4.4vw, 57px)',
             lineHeight: 0.88, textTransform: 'uppercase', color: '#0F0F0F',
             marginBottom: '28px',
           }}>WORK<br />WITH<br />MIAN.</h2>

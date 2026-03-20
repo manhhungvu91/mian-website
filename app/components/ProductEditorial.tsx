@@ -1,15 +1,8 @@
 export default function ProductEditorial() {
-  const items = [
-    { label: 'PRECISION TAILORING', sub: 'Compact stretch wool · FW26', tone: '#1A1A1A' },
-    { label: 'TECHNICAL OUTERWEAR', sub: 'Bonded ripstop · SS26', tone: '#2E2E2A' },
-    { label: 'RELAXED TAILORING', sub: 'Washed linen · Core', tone: '#3A3630' },
-    { label: 'CONTEMPORARY CASUAL', sub: 'Organic terry · SS26', tone: '#262624' },
-  ]
-
   return (
     <section id="product-editorial" style={{
-      background: '#0F0F0F',
-      padding: '120px 80px',
+      background: '#FFFFFF',
+      padding: '120px 80px 0',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
@@ -23,81 +16,59 @@ export default function ProductEditorial() {
               fontFamily: "'IBM Plex Mono', monospace",
               fontWeight: 400, fontSize: '9px',
               letterSpacing: '0.3em', textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.3)', display: 'block', marginBottom: '16px',
+              color: '#9A9A96', display: 'block', marginBottom: '16px',
             }}>AESTHETIC DIRECTION</span>
             <h2 style={{
               fontFamily: "'Archivo', sans-serif",
               fontWeight: 400,
-              fontSize: 'clamp(32px, 4vw, 56px)',
+              fontSize: 'clamp(35px, 4.4vw, 62px)',
               lineHeight: 0.88, letterSpacing: '-0.01em',
-              textTransform: 'uppercase', color: '#FFFFFF',
+              textTransform: 'uppercase', color: '#0F0F0F',
             }}>WE KNOW WHAT GOOD CLOTHES LOOK LIKE.</h2>
           </div>
           <p style={{
             fontFamily: 'Inter, sans-serif', fontWeight: 300,
             fontSize: '13px', lineHeight: 1.85,
-            color: 'rgba(255,255,255,0.35)',
+            color: '#5A5A56',
             maxWidth: '280px', textAlign: 'right',
           }}>Our team moves in the same aesthetic world as the brands we work with. That understanding is present in every development decision — not just the ones that are obvious.</p>
         </div>
 
-        {/* 4-column product grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '2px',
-        }}>
-          {items.map((item, i) => (
-            <div key={i}>
-              <div style={{
-                aspectRatio: '3/4',
-                background: item.tone,
-                position: 'relative', overflow: 'hidden',
-              }}>
-                <div style={{
-                  position: 'absolute', inset: 0,
-                  background: `linear-gradient(160deg, ${item.tone} 0%, rgba(15,15,15,0.95) 100%)`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  <span style={{
-                    fontFamily: "'Archivo', sans-serif",
-                    fontWeight: 300, fontSize: '11px',
-                    letterSpacing: '0.3em', textTransform: 'uppercase',
-                    color: 'rgba(255,255,255,0.08)',
-                  }}>MIAN</span>
-                </div>
-              </div>
-              <div style={{ padding: '14px 0 0' }}>
-                <p style={{
-                  fontFamily: "'IBM Plex Mono', monospace",
-                  fontWeight: 400, fontSize: '8px',
-                  letterSpacing: '0.18em', textTransform: 'uppercase',
-                  color: 'rgba(255,255,255,0.55)', marginBottom: '4px',
-                }}>{item.label}</p>
-                <p style={{
-                  fontFamily: "'IBM Plex Mono', monospace",
-                  fontWeight: 300, fontSize: '8px',
-                  letterSpacing: '0.1em',
-                  color: 'rgba(255,255,255,0.22)',
-                }}>{item.sub}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Footer note */}
-        <div style={{
-          marginTop: '48px', paddingTop: '32px',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
-        }}>
-          <p style={{
-            fontFamily: "'IBM Plex Mono', monospace",
-            fontWeight: 300, fontSize: '8px',
-            letterSpacing: '0.18em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.18)',
-          }}>EDITORIAL PHOTOGRAPHY IN PRODUCTION — Q3 2026</p>
-        </div>
       </div>
+
+      {/* Full-bleed image 1 — light editorial */}
+      <div style={{
+        width: '100%',
+        aspectRatio: '3/2',
+        background: '#E8E8E4',
+        position: 'relative',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+      }}>
+        <span style={{
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontWeight: 300, fontSize: '8px',
+          letterSpacing: '0.2em', textTransform: 'uppercase',
+          color: 'rgba(15,15,15,0.15)',
+        }}>PRECISION TAILORING · FW26</span>
+      </div>
+
+      {/* Full-bleed image 2 — dark factory */}
+      <div style={{
+        width: '100%',
+        aspectRatio: '3/2',
+        background: '#1C1C1C',
+        position: 'relative',
+        marginTop: '3px',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+      }}>
+        <span style={{
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontWeight: 300, fontSize: '8px',
+          letterSpacing: '0.2em', textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.15)',
+        }}>FACTORY FLOOR · VIETNAM</span>
+      </div>
+
     </section>
   )
 }

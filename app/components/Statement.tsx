@@ -1,7 +1,7 @@
 export default function Statement() {
   return (
     <section style={{
-      background: '#0F0F0F',
+      background: '#FFFFFF',
       padding: '120px 80px',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
@@ -9,9 +9,9 @@ export default function Statement() {
         <h2 style={{
             fontFamily: "'Archivo', sans-serif",
             fontWeight: 400,
-            fontSize: 'clamp(32px, 4.5vw, 64px)',
+            fontSize: 'clamp(35px, 5vw, 70px)',
             lineHeight: 0.9, letterSpacing: '-0.015em',
-            textTransform: 'uppercase', color: '#FFFFFF',
+            textTransform: 'uppercase', color: '#0F0F0F',
           }}>
             MOST MANUFACTURERS EXECUTE YOUR SPECS.<br />
             WE HELP YOU BUILD THEM.

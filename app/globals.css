@@ -118,7 +118,7 @@ a { color: inherit; text-decoration: none; }
     padding: 0 24px 52px !important;
   }
   section[style*="100vh"] h1 {
-    font-size: 36px !important;
+    font-size: 40px !important;
     line-height: 0.94 !important;
     letter-spacing: -0.015em !important;
   }
@@ -165,7 +165,7 @@ a { color: inherit; text-decoration: none; }
     display: none !important;
   }
   section#capabilities .cap-row h3 {
-    font-size: 22px !important;
+    font-size: 24px !important;
     line-height: 0.94 !important;
   }
   section#capabilities .cap-row p {
@@ -188,8 +188,8 @@ a { color: inherit; text-decoration: none; }
   }
 
   /* Statement */
-  section[style*="0F0F0F"] h2[style*="4.5vw"] {
-    font-size: 26px !important;
+  section[style*="FFFFFF"] h2[style*="5vw"] {
+    font-size: 29px !important;
     line-height: 0.95 !important;
     letter-spacing: -0.01em !important;
   }

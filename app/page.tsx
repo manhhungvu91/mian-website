@@ -4,6 +4,7 @@ import Editorial from './components/Editorial'
 import Capabilities from './components/Capabilities'
 import ProductEditorial from './components/ProductEditorial'
 import Statement from './components/Statement'
+import FullBleed from './components/FullBleed'
 import RDCenter from './components/RDCenter'
 import Stats from './components/Stats'
 import Certifications from './components/Certifications'
@@ -19,6 +20,7 @@ export default function Home() {
       <Capabilities />
       <ProductEditorial />
       <Statement />
+      <FullBleed bg="#1A1A16" label="MIAN GROUP R&D CENTER · INTERIOR · 2024" aspect="16/9" />
       <RDCenter />
       <Stats />
       <Certifications />

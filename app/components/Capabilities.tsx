@@ -61,7 +61,7 @@ export default function Capabilities() {
               <h3 style={{
                 fontFamily: "'Archivo', sans-serif",
                 fontWeight: 400,
-                fontSize: 'clamp(26px, 2.8vw, 40px)',
+                fontSize: 'clamp(29px, 3.1vw, 44px)',
                 lineHeight: 0.9, letterSpacing: '-0.01em',
                 textTransform: 'uppercase', color: '#0F0F0F',
                 whiteSpace: 'pre-line',

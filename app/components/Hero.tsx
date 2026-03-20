@@ -40,7 +40,7 @@ export default function Hero() {
         <h1 style={{
           fontFamily: "'Archivo', sans-serif",
           fontWeight: 400,
-          fontSize: 'clamp(44px, 6.5vw, 88px)',
+          fontSize: 'clamp(48px, 7.2vw, 97px)',
           lineHeight: 0.92,
           letterSpacing: '-0.01em',
           textTransform: 'uppercase',
