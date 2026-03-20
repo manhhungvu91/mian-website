@@ -1,51 +1,40 @@
 export default function Footer() {
   return (
-    <footer
-      style={{
-        background: 'var(--ink)',
-        padding: '64px 0',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '10px',
-      }}
-    >
-      <span
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          fontWeight: 500,
-          fontSize: '11px',
-          letterSpacing: '0.3em',
-          textTransform: 'uppercase',
-          color: 'var(--parchment)',
-        }}
-      >
-        MIAN
-      </span>
+    <footer style={{
+      background: '#0F0F0F',
+      padding: '72px 80px',
+      display: 'flex',
+      flexDirection: 'column', alignItems: 'center', gap: '14px',
+      borderTop: '1px solid rgba(255,255,255,0.05)',
+    }}>
+      <span style={{
+        fontFamily: "'Barlow Condensed', sans-serif",
+        fontWeight: 700, fontSize: '16px',
+        letterSpacing: '0.52em', textTransform: 'uppercase',
+        color: '#FFFFFF',
+      }}>MIAN GROUP</span>
 
-      <span
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          fontWeight: 300,
-          fontSize: '10px',
-          letterSpacing: '0.1em',
-          color: 'var(--stone-3)',
-        }}
-      >
-        Vietnam&apos;s Full-Service Manufacturing Partner
-      </span>
+      <span style={{
+        fontFamily: "'IBM Plex Mono', monospace",
+        fontWeight: 300, fontSize: '8.5px',
+        letterSpacing: '0.2em', textTransform: 'uppercase',
+        color: 'rgba(255,255,255,0.3)',
+      }}>FULL-SERVICE MANUFACTURING PARTNER · VIETNAM</span>
 
-      <span
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          fontWeight: 300,
-          fontSize: '10px',
-          letterSpacing: '0.01em',
-          color: 'var(--stone-3)',
-        }}
-      >
-        mianapparel.com · sourcing@mianapparel.com
-      </span>
+      <span style={{
+        fontFamily: "'IBM Plex Mono', monospace",
+        fontWeight: 300, fontSize: '8.5px',
+        letterSpacing: '0.1em',
+        color: 'rgba(255,255,255,0.18)',
+      }}>mianapparel.com &nbsp;·&nbsp; sourcing@mianapparel.com</span>
+
+      <span style={{
+        fontFamily: "'IBM Plex Mono', monospace",
+        fontWeight: 300, fontSize: '8px',
+        letterSpacing: '0.1em',
+        color: 'rgba(255,255,255,0.1)',
+        marginTop: '8px',
+      }}>© 2026 MIAN Group. All rights reserved.</span>
     </footer>
-  );
+  )
 }

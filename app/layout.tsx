@@ -1,24 +1,21 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Nav from './components/Nav';
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'MIAN Apparel — Full-Service Manufacturing Partner',
-  description:
-    'Vietnam\u2019s full-service garment manufacturing partner. MOQ-flexible, CLO3D-ready, trusted by Zara, H\u0026M, and Costco.',
-};
+  title: 'MIAN Group — Full-Service Manufacturing Partner, Vietnam',
+  description: 'Premium garment manufacturing partner. 7 factories. 8.8M pieces per month. Where fashion is made.',
+  keywords: 'garment manufacturer vietnam, fashion manufacturing, CMT factory, sustainable manufacturing',
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <Nav />
-        {children}
-      </body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+      </head>
+      <body>{children}</body>
     </html>
-  );
+  )
 }

@@ -1,127 +1,93 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-
+'use client'
 export default function Hero() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
-  }, []);
-
   return (
-    <section
-      style={{
-        minHeight: '100vh',
-        background: 'var(--ink)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        padding: isMobile
-          ? '120px 32px 140px 32px'
-          : '120px 80px 140px 80px',
-      }}
-    >
-      <div style={{ maxWidth: '1320px', margin: '0 auto', width: '100%' }}>
-        <div style={{ marginBottom: isMobile ? '48px' : '64px' }}>
-          <p
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 400,
-              fontSize: '8px',
-              letterSpacing: '0.28em',
-              textTransform: 'uppercase',
-              color: 'var(--camel)',
-              marginBottom: '28px',
-            }}
-          >
-            Vietnam&apos;s Manufacturing Studio
-          </p>
+    <section style={{
+      position: 'relative',
+      width: '100%', height: '100vh', minHeight: '640px',
+      background: '#0F0F0F',
+      display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+      overflow: 'hidden',
+    }}>
+      {/* Background placeholder — replace with R&D Center photo when available */}
+      <div style={{
+        position: 'absolute', inset: 0,
+        background: 'linear-gradient(165deg, #1A1A1A 0%, #0F0F0F 60%, #1C1810 100%)',
+      }} />
 
-          <h1
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontWeight: 300,
-              fontSize: isMobile ? '72px' : 'clamp(80px, 13vw, 168px)',
-              lineHeight: 0.85,
-              letterSpacing: '-0.03em',
-              color: 'var(--parchment)',
-              marginBottom: '40px',
-            }}
-          >
-            Your Full-<br />
-            <em style={{ fontStyle: 'italic' }}>Service</em><br />
-            Partner.
-          </h1>
+      {/* Dark gradient overlay — bottom-weighted so text is always legible */}
+      <div style={{
+        position: 'absolute', inset: 0, zIndex: 1,
+        background: 'linear-gradient(to bottom, rgba(15,15,15,0.1) 0%, rgba(15,15,15,0.5) 50%, rgba(15,15,15,0.88) 100%)',
+      }} />
 
-          <p
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 300,
-              fontSize: '14px',
-              lineHeight: 1.8,
-              letterSpacing: '0.01em',
-              color: 'var(--stone-3)',
-              maxWidth: '520px',
-            }}
-          >
-            From first sketch to final shipment — MOQ-flexible, CLO3D-ready, and trusted by Zara, H&amp;M, and Costco.
-          </p>
-        </div>
+      {/* Content */}
+      <div style={{
+        position: 'relative', zIndex: 2,
+        maxWidth: '1400px', margin: '0 auto', width: '100%',
+        padding: '0 80px 88px',
+      }}>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-          }}
-        >
-          <a
-            href="#inquire"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 400,
-              fontSize: '9px',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: 'var(--ink)',
-              background: 'var(--parchment)',
-              padding: '14px 32px',
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-              display: 'inline-block',
-              cursor: 'pointer',
-              transition: 'opacity 200ms ease-out',
-            }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.6'; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1'; }}
-          >
-            Start an Inquiry
-          </a>
+        {/* Eyebrow */}
+        <p style={{
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontWeight: 300, fontSize: '9px',
+          letterSpacing: '0.28em', textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.35)',
+          marginBottom: '20px',
+        }}>MIAN GROUP · VIETNAM · EST. 2000</p>
 
-          <div style={{ display: 'flex', gap: isMobile ? '28px' : '48px', alignItems: 'flex-end' }}>
-            {['8.8M', '25+', '7'].map((number) => (
-              <span
-                key={number}
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontWeight: 300,
-                  fontSize: '22px',
-                  color: 'var(--parchment)',
-                  lineHeight: 1,
-                  letterSpacing: '-0.01em',
-                }}
-              >
-                {number}
-              </span>
-            ))}
-          </div>
-        </div>
+        {/* Headline */}
+        <h1 style={{
+          fontFamily: "'Barlow Condensed', sans-serif",
+          fontWeight: 700,
+          fontSize: 'clamp(72px, 11.5vw, 168px)',
+          lineHeight: 0.86,
+          letterSpacing: '-0.01em',
+          textTransform: 'uppercase',
+          color: '#FFFFFF',
+          marginBottom: '36px',
+        }}>
+          WHERE<br />FASHION<br />IS MADE.
+        </h1>
+
+        {/* Data line */}
+        <p style={{
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontWeight: 300, fontSize: '9.5px',
+          letterSpacing: '0.16em', textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.3)',
+          marginBottom: '40px',
+        }}>7 FACTORIES &nbsp;·&nbsp; 8.8M PCS / MONTH &nbsp;·&nbsp; 12,000+ WORKERS &nbsp;·&nbsp; 172 PRODUCTION LINES</p>
+
+        {/* CTA */}
+        <a href="#inquire" style={{
+          display: 'inline-block',
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontWeight: 500, fontSize: '10px',
+          letterSpacing: '0.22em', textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.7)',
+          border: '1px solid rgba(255,255,255,0.22)',
+          padding: '13px 32px',
+          transition: 'border-color 150ms ease-out, color 150ms ease-out',
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.borderColor = '#4A6FA5'
+          e.currentTarget.style.color = '#4A6FA5'
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.borderColor = 'rgba(255,255,255,0.22)'
+          e.currentTarget.style.color = 'rgba(255,255,255,0.7)'
+        }}>BEGIN AN INQUIRY</a>
       </div>
+
+      {/* Scroll indicator */}
+      <div style={{
+        position: 'absolute', bottom: '32px', right: '56px', zIndex: 2,
+        fontFamily: "'IBM Plex Mono', monospace",
+        fontSize: '8px', letterSpacing: '0.2em',
+        color: 'rgba(255,255,255,0.2)', textTransform: 'uppercase',
+        writingMode: 'vertical-rl',
+      }}>SCROLL</div>
     </section>
-  );
+  )
 }

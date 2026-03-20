@@ -1,23 +1,31 @@
-import Hero from './components/Hero';
-import Ticker from './components/Ticker';
-import Differentiators from './components/Differentiators';
-import PullQuote from './components/PullQuote';
-import StatsBar from './components/StatsBar';
-import Certifications from './components/Certifications';
-import SourcingForm from './components/SourcingForm';
-import Footer from './components/Footer';
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import ClientStrip from './components/ClientStrip'
+import Editorial from './components/Editorial'
+import Capabilities from './components/Capabilities'
+import ProductEditorial from './components/ProductEditorial'
+import Statement from './components/Statement'
+import RDCenter from './components/RDCenter'
+import Stats from './components/Stats'
+import Certifications from './components/Certifications'
+import Inquiry from './components/Inquiry'
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
     <main>
+      <Nav />
       <Hero />
-      <Ticker />
-      <div id="capabilities"><Differentiators /></div>
-      <div id="about"><PullQuote /></div>
-      <div id="products"><StatsBar /></div>
-      <div id="factories"><Certifications /></div>
-      <SourcingForm />
+      <ClientStrip />
+      <Editorial />
+      <Capabilities />
+      <ProductEditorial />
+      <Statement />
+      <RDCenter />
+      <Stats />
+      <Certifications />
+      <Inquiry />
       <Footer />
     </main>
-  );
+  )
 }
