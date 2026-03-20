@@ -21,7 +21,7 @@ export default function Certifications() {
               color: 'rgba(255,255,255,0.3)', display: 'block', marginBottom: '16px',
             }}>COMPLIANCE</span>
             <h3 style={{
-              fontFamily: "'Archivo Black', sans-serif",
+              fontFamily: "'Archivo', sans-serif",
               fontWeight: 400, fontSize: 'clamp(24px, 2.8vw, 36px)',
               lineHeight: 0.9, textTransform: 'uppercase',
               color: '#FFFFFF', marginBottom: '24px',

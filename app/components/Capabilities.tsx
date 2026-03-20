@@ -26,7 +26,6 @@ export default function Capabilities() {
     <section id="capabilities" style={{
       background: '#FFFFFF',
       padding: '0 80px 120px',
-      borderTop: '1px solid #E8E8E4',
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
@@ -60,7 +59,7 @@ export default function Capabilities() {
 
               {/* Title */}
               <h3 style={{
-                fontFamily: "'Archivo Black', sans-serif",
+                fontFamily: "'Archivo', sans-serif",
                 fontWeight: 400,
                 fontSize: 'clamp(26px, 2.8vw, 40px)',
                 lineHeight: 0.9, letterSpacing: '-0.01em',

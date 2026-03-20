@@ -5,11 +5,10 @@ export default function Footer() {
       padding: '72px 80px',
       display: 'flex',
       flexDirection: 'column', alignItems: 'center', gap: '14px',
-      borderTop: '1px solid rgba(255,255,255,0.05)',
     }}>
       <span style={{
-        fontFamily: "'Barlow Condensed', sans-serif",
-        fontWeight: 700, fontSize: '16px',
+        fontFamily: "'Archivo', sans-serif",
+        fontWeight: 400, fontSize: '16px',
         letterSpacing: '0.52em', textTransform: 'uppercase',
         color: '#FFFFFF',
       }}>MIAN GROUP</span>

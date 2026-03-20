@@ -7,7 +7,7 @@ export default function ProductEditorial() {
   ]
 
   return (
-    <section style={{
+    <section id="product-editorial" style={{
       background: '#0F0F0F',
       padding: '120px 80px',
     }}>
@@ -26,7 +26,7 @@ export default function ProductEditorial() {
               color: 'rgba(255,255,255,0.3)', display: 'block', marginBottom: '16px',
             }}>AESTHETIC DIRECTION</span>
             <h2 style={{
-              fontFamily: "'Archivo Black', sans-serif",
+              fontFamily: "'Archivo', sans-serif",
               fontWeight: 400,
               fontSize: 'clamp(32px, 4vw, 56px)',
               lineHeight: 0.88, letterSpacing: '-0.01em',
@@ -60,7 +60,7 @@ export default function ProductEditorial() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
                   <span style={{
-                    fontFamily: "'Archivo Black', sans-serif",
+                    fontFamily: "'Archivo', sans-serif",
                     fontWeight: 300, fontSize: '11px',
                     letterSpacing: '0.3em', textTransform: 'uppercase',
                     color: 'rgba(255,255,255,0.08)',

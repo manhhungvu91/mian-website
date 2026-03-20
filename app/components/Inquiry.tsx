@@ -32,7 +32,6 @@ export default function Inquiry() {
     <section id="inquire" style={{
       background: '#FFFFFF',
       padding: '120px 80px',
-      borderTop: '1px solid #E8E8E4',
     }}>
       <div style={{
         maxWidth: '1400px', margin: '0 auto',
@@ -49,7 +48,7 @@ export default function Inquiry() {
             color: '#9A9A96', display: 'block', marginBottom: '16px',
           }}>START HERE</span>
           <h2 style={{
-            fontFamily: "'Archivo Black', sans-serif",
+            fontFamily: "'Archivo', sans-serif",
             fontWeight: 400, fontSize: 'clamp(32px, 4vw, 52px)',
             lineHeight: 0.88, textTransform: 'uppercase', color: '#0F0F0F',
             marginBottom: '28px',
@@ -71,7 +70,7 @@ export default function Inquiry() {
           {sent ? (
             <div style={{ padding: '80px 0' }}>
               <h3 style={{
-                fontFamily: "'Archivo Black', sans-serif",
+                fontFamily: "'Archivo', sans-serif",
                 fontWeight: 400, fontSize: '42px',
                 fontStyle: 'italic', color: '#0F0F0F',
                 marginBottom: '16px',

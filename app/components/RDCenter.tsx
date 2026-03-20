@@ -15,7 +15,7 @@ export default function RDCenter() {
             color: 'rgba(255,255,255,0.3)', display: 'block', marginBottom: '16px',
           }}>THE CENTER</span>
           <h2 style={{
-            fontFamily: "'Archivo Black', sans-serif",
+            fontFamily: "'Archivo', sans-serif",
             fontWeight: 400,
             fontSize: 'clamp(28px, 3.5vw, 48px)',
             lineHeight: 0.88, letterSpacing: '-0.01em',
@@ -105,7 +105,7 @@ export default function RDCenter() {
                   borderTop: '1px solid rgba(255,255,255,0.06)',
                 }}>
                   <span style={{
-                    fontFamily: "'Archivo Black', sans-serif",
+                    fontFamily: "'Archivo', sans-serif",
                     fontWeight: 400, fontSize: '16px',
                     letterSpacing: '0.02em', color: '#FFFFFF',
                     textTransform: 'uppercase',

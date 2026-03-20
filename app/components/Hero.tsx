@@ -38,7 +38,7 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 style={{
-          fontFamily: "'Archivo Black', sans-serif",
+          fontFamily: "'Archivo', sans-serif",
           fontWeight: 400,
           fontSize: 'clamp(44px, 6.5vw, 88px)',
           lineHeight: 0.92,

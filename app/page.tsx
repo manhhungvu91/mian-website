@@ -1,6 +1,5 @@
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import ClientStrip from './components/ClientStrip'
 import Editorial from './components/Editorial'
 import Capabilities from './components/Capabilities'
 import ProductEditorial from './components/ProductEditorial'
@@ -16,7 +15,6 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
-      <ClientStrip />
       <Editorial />
       <Capabilities />
       <ProductEditorial />
